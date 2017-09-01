@@ -1,0 +1,6 @@
+C:\Kode\LazySetup\LazySetup\bin\Debug\netcoreapp2.0\LazySetup.deps.json
+C:\Kode\LazySetup\LazySetup\bin\Debug\netcoreapp2.0\LazySetup.dll
+C:\Kode\LazySetup\LazySetup\obj\Debug\netcoreapp2.0\LazySetup.csprojResolveAssemblyReference.cache
+C:\Kode\LazySetup\LazySetup\obj\Debug\netcoreapp2.0\LazySetup.csproj.CoreCompileInputs.cache
+C:\Kode\LazySetup\LazySetup\obj\Debug\netcoreapp2.0\LazySetup.AssemblyInfoInputs.cache
+C:\Kode\LazySetup\LazySetup\obj\Debug\netcoreapp2.0\LazySetup.AssemblyInfo.cs
