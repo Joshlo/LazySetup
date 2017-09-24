@@ -1,0 +1,11 @@
+C:\Kode\lazysetup\LazySetupTest\bin\Debug\netcoreapp1.1\LazySetupTest.deps.json
+C:\Kode\lazysetup\LazySetupTest\bin\Debug\netcoreapp1.1\LazySetupTest.runtimeconfig.json
+C:\Kode\lazysetup\LazySetupTest\bin\Debug\netcoreapp1.1\LazySetupTest.runtimeconfig.dev.json
+C:\Kode\lazysetup\LazySetupTest\bin\Debug\netcoreapp1.1\LazySetupTest.dll
+C:\Kode\lazysetup\LazySetupTest\bin\Debug\netcoreapp1.1\LazySetupTest.pdb
+C:\Kode\lazysetup\LazySetupTest\obj\Debug\netcoreapp1.1\LazySetupTest.csprojResolveAssemblyReference.cache
+C:\Kode\lazysetup\LazySetupTest\obj\Debug\netcoreapp1.1\LazySetupTest.csproj.CoreCompileInputs.cache
+C:\Kode\lazysetup\LazySetupTest\obj\Debug\netcoreapp1.1\LazySetupTest.AssemblyInfoInputs.cache
+C:\Kode\lazysetup\LazySetupTest\obj\Debug\netcoreapp1.1\LazySetupTest.AssemblyInfo.cs
+C:\Kode\lazysetup\LazySetupTest\obj\Debug\netcoreapp1.1\LazySetupTest.dll
+C:\Kode\lazysetup\LazySetupTest\obj\Debug\netcoreapp1.1\LazySetupTest.pdb

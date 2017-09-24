@@ -60,9 +60,14 @@ namespace LazySetup.Sql
             return result.FirstOrDefault();
         }
 
-        public Task<TResult> QueryMultipleAsync<TResult>(string sql, Func<SqlMapper.GridReader, TResult> func, object parameters = null)
+        public async Task<TResult> QueryMultipleAsync<TResult>(string sql, Func<SqlMapper.GridReader, TResult> func, object parameters = null)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(ConnectionString))
+            {
+                connection.Open();
+                var result = await connection.QueryMultipleAsync(sql, parameters);
+                return func(result);
+            }
         }
 
         public IEnumerable<TResult> Query<TResult>(string sql, object parameters = null)
@@ -109,7 +114,11 @@ namespace LazySetup.Sql
 
         public TResult QueryMultiple<TResult>(string sql, Func<SqlMapper.GridReader, TResult> func, object parameters = null)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(ConnectionString))
+            {
+                connection.Open();
+                return func(connection.QueryMultiple(sql, parameters));
+            }
         }
     }
 }
