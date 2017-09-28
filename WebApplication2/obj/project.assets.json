@@ -4854,7 +4854,7 @@
   },
   "libraries": {
     "Dapper/1.50.2": {
-      "sha512": "6VcCiiOxVhgMwgMCuQuaff8I5IyDamrzeOjuUH1iMExh8R5TJqwkVCpwdVJGQdwSCqWsQA/PerrrK7T6mONthQ==",
+      "sha512": "31Ju5VGyNNc66OAsw+SCp1TWPBuyw8ZBdkMG5pSUPChZcy27s2GhVz5B9INP4f25mPqfiJ+mfeHy9JAJyyT+LQ==",
       "type": "package",
       "path": "dapper/1.50.2",
       "files": [
@@ -5007,7 +5007,7 @@
       ]
     },
     "Microsoft.AspNetCore.Authentication/2.0.0": {
-      "sha512": "QmgG+EkJg+lObB7XffZGrbj1E8JE74ZePyVsuywhXrvPDObrjUwyvsbkOQvdtjiULhkh+8fgfhBcDTTiMr56Eg==",
+      "sha512": "FIqO1utTvcPchQsEqYmYN9l7pyCutTpvZuuSHI7We2gKzG7wne90SVV/Su8MhcjhijtZZfG/XD2+OI5BHmH4Vw==",
       "type": "package",
       "path": "microsoft.aspnetcore.authentication/2.0.0",
       "files": [
@@ -12716,11 +12716,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Kode\\lazysetup\\WebApplication2\\WebApplication2.csproj",
+      "projectUniqueName": "C:\\Kode\\LazySetup\\WebApplication2\\WebApplication2.csproj",
       "projectName": "WebApplication2",
-      "projectPath": "C:\\Kode\\lazysetup\\WebApplication2\\WebApplication2.csproj",
+      "projectPath": "C:\\Kode\\LazySetup\\WebApplication2\\WebApplication2.csproj",
       "packagesPath": "C:\\Users\\kpedersen\\.nuget\\packages\\",
-      "outputPath": "C:\\Kode\\lazysetup\\WebApplication2\\obj\\",
+      "outputPath": "C:\\Kode\\LazySetup\\WebApplication2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12739,8 +12739,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Kode\\lazysetup\\LazySetup\\LazySetup.csproj": {
-              "projectPath": "C:\\Kode\\lazysetup\\LazySetup\\LazySetup.csproj"
+            "C:\\Kode\\LazySetup\\LazySetup\\LazySetup.csproj": {
+              "projectPath": "C:\\Kode\\LazySetup\\LazySetup\\LazySetup.csproj"
             }
           }
         }

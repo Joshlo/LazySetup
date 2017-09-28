@@ -50,48 +50,58 @@ namespace LazySetup.Batch
                 var requests = JsonConvert.DeserializeObject<IEnumerable<RequestModel>>(json);
 
                 var responseBody = new List<ResponseModel>();
-
-                foreach (var request in requests)
+                
+                try
                 {
-                    var newRequest = new HttpRequestFeature
+                    foreach (var request in requests)
                     {
-                        Body = request.Body != null ? new MemoryStream(Encoding.ASCII.GetBytes(request.Body)) : null,
-                        Headers = context.Request.Headers,
-                        Method = request.Method,
-                        Path = request.RelativeUrl,
-                        PathBase = string.Empty,
-                        Protocol = context.Request.Protocol,
-                        Scheme = context.Request.Scheme,
-                        QueryString = string.Empty
-                    };
+                        var newRequest = new HttpRequestFeature
+                        {
+                            Body = request.Body != null ? new MemoryStream(Encoding.ASCII.GetBytes(request.Body)) : null,
+                            Headers = context.Request.Headers,
+                            Method = request.Method,
+                            Path = request.RelativeUrl,
+                            PathBase = string.Empty,
+                            Protocol = context.Request.Protocol,
+                            Scheme = context.Request.Scheme,
+                            QueryString = string.Empty
+                        };
 
-                    var newRespone = new HttpResponseFeature { Body = new MemoryStream(), StatusCode = 419 };
-                    var requestLifetimeFeature = new HttpRequestLifetimeFeature();
+                        var newRespone = new HttpResponseFeature { Body = new MemoryStream() };
+                        var requestLifetimeFeature = new HttpRequestLifetimeFeature();
 
-                    var features = CreateDefaultFeatures(context.Features);
-                    features.Set<IHttpRequestFeature>(newRequest);
-                    features.Set<IHttpResponseFeature>(newRespone);
-                    features.Set<IHttpRequestLifetimeFeature>(requestLifetimeFeature);
+                        var features = CreateDefaultFeatures(context.Features);
+                        features.Set<IHttpRequestFeature>(newRequest);
+                        features.Set<IHttpResponseFeature>(newRespone);
+                        features.Set<IHttpRequestLifetimeFeature>(requestLifetimeFeature);
 
-                    var innerContext = _factory.Create(features);
+                        var innerContext = _factory.Create(features);
 
-                    await _next(innerContext);
 
-                    var responseJson = await streamHelper.StreamToJson(innerContext.Response.Body);
-                    responseBody.Add(new ResponseModel
-                    {
-                        StatusCode = innerContext.Response.StatusCode,
-                        Headers = innerContext.Response.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                        Body = JsonConvert.DeserializeObject(responseJson)
-                    });
+                        using (var memStream = new MemoryStream())
+                        {
+                            innerContext.Response.Body = memStream;
+
+                            await _next(innerContext);
+                            memStream.Position = 0;
+                            var rBody = new StreamReader(memStream).ReadToEnd();
+
+                            responseBody.Add(new ResponseModel
+                            {
+                                StatusCode = innerContext.Response.StatusCode,
+                                Headers = innerContext.Response.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                                Body = JsonConvert.DeserializeObject(rBody)
+                            });
+                        }
+                    }
+                }
+                finally
+                {
+                    var responseJson = JsonConvert.SerializeObject(responseBody);
+                    context.Response.StatusCode = 200;
+                    await context.Response.WriteAsync(responseJson);
                 }
 
-                var binFormatter = new BinaryFormatter();
-                var mStream = new MemoryStream();
-                binFormatter.Serialize(mStream, responseBody);
-
-                context.Response.StatusCode = 200;
-                context.Response.Body = mStream;
                 return;
             }
 
