@@ -50,7 +50,7 @@ namespace LazySetup.Batch
                 var requests = JsonConvert.DeserializeObject<IEnumerable<RequestModel>>(json);
 
                 var responseBody = new List<ResponseModel>();
-                
+
                 try
                 {
                     foreach (var request in requests)
@@ -77,22 +77,16 @@ namespace LazySetup.Batch
 
                         var innerContext = _factory.Create(features);
 
+                        await _next(innerContext);
+                        innerContext.Response.Body.Position = 0;
+                        var rBody = await streamHelper.StreamToJson(innerContext.Response.Body);
 
-                        using (var memStream = new MemoryStream())
+                        responseBody.Add(new ResponseModel
                         {
-                            innerContext.Response.Body = memStream;
-
-                            await _next(innerContext);
-                            memStream.Position = 0;
-                            var rBody = new StreamReader(memStream).ReadToEnd();
-
-                            responseBody.Add(new ResponseModel
-                            {
-                                StatusCode = innerContext.Response.StatusCode,
-                                Headers = innerContext.Response.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                                Body = JsonConvert.DeserializeObject(rBody)
-                            });
-                        }
+                            StatusCode = innerContext.Response.StatusCode,
+                            Headers = innerContext.Response.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
+                            Body = JsonConvert.DeserializeObject(rBody)
+                        });
                     }
                 }
                 finally
