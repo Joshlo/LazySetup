@@ -5,7 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace LazySetup.Token
 {
-    public class TokenProviderOptions
+    public class TokenOptions
     {
         /// <summary>
         /// Defaults to "/token"
@@ -37,7 +37,7 @@ namespace LazySetup.Token
         /// </summary>
         public SigningCredentials SigningCredentials { get; set; } = new SigningCredentials(new SymmetricSecurityKey(Encoding.ASCII.GetBytes("NotSoSecure12345")), SecurityAlgorithms.HmacSha256);
 
-        public TokenProviderOptions(string identifier)
+        public TokenOptions(string identifier)
         {
             Identifier = identifier;
         }

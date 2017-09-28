@@ -17,7 +17,7 @@ namespace LazySetup.Batch
         public static IApplicationBuilder UseBatchRequest(this IApplicationBuilder app)
         {
             var factory = app.ApplicationServices.GetRequiredService<IHttpContextFactory>();
-            app.UseMiddleware<BatchRequestProvider>(factory, new BatchRequestOptions {Host = new Uri("http://localhost:57575") });
+            app.UseMiddleware<BatchMiddleware>(factory, new BatchRequestOptions());
             return app;
         }
     }

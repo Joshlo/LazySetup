@@ -13,9 +13,9 @@ namespace LazySetup.Token
 {
     public static class TokenSetup
     {
-        public static IApplicationBuilder UseTokenAuthorize(this IApplicationBuilder app, TokenProviderOptions options)
+        public static IApplicationBuilder UseTokenAuthorize(this IApplicationBuilder app, TokenOptions options)
         {
-            app.UseMiddleware<TokenProvider>(options);
+            app.UseMiddleware<TokenMiddleware>(options);
             app.UseAuthentication();
             return app;
         }

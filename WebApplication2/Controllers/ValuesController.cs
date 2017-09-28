@@ -16,13 +16,19 @@ namespace WebApplication2.Controllers
             return new string[] { "value1", "value2" };
         }
 
+        [HttpGet("getter")]
+        public async Task<IActionResult> Getter()
+        {
+            return Ok(new List<string> { "test" });
+        }
+
         // GET api/values/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";
         }
-
+        
         // POST api/values
         [HttpPost]
         public void Post([FromBody]string value)

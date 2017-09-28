@@ -15,13 +15,13 @@ using Newtonsoft.Json;
 
 namespace LazySetup.Batch
 {
-    public class BatchRequestProvider
+    public class BatchMiddleware
     {
         private readonly RequestDelegate _next;
         private readonly IHttpContextFactory _factory;
         private readonly BatchRequestOptions _options;
 
-        public BatchRequestProvider(RequestDelegate next, IHttpContextFactory factory, BatchRequestOptions options)
+        public BatchMiddleware(RequestDelegate next, IHttpContextFactory factory, BatchRequestOptions options)
         {
             _next = next;
             _factory = factory;
@@ -62,21 +62,21 @@ namespace LazySetup.Batch
                         PathBase = string.Empty,
                         Protocol = context.Request.Protocol,
                         Scheme = context.Request.Scheme,
-                        QueryString = context.Request.QueryString.Value
+                        QueryString = string.Empty
                     };
 
-                    var newRespone = new HttpResponseFeature();
-                    
+                    var newRespone = new HttpResponseFeature { Body = new MemoryStream(), StatusCode = 419 };
+                    var requestLifetimeFeature = new HttpRequestLifetimeFeature();
+
                     var features = CreateDefaultFeatures(context.Features);
                     features.Set<IHttpRequestFeature>(newRequest);
                     features.Set<IHttpResponseFeature>(newRespone);
-                    
-                    var requestLifetimeFeature = new HttpRequestLifetimeFeature();
                     features.Set<IHttpRequestLifetimeFeature>(requestLifetimeFeature);
 
                     var innerContext = _factory.Create(features);
+
                     await _next(innerContext);
-                    
+
                     var responseJson = await streamHelper.StreamToJson(innerContext.Response.Body);
                     responseBody.Add(new ResponseModel
                     {

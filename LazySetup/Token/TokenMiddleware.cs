@@ -12,12 +12,12 @@ using Newtonsoft.Json;
 
 namespace LazySetup.Token
 {
-    public class TokenProvider
+    public class TokenMiddleware
     {
         private readonly RequestDelegate _next;
-        private readonly TokenProviderOptions _options;
+        private readonly TokenOptions _options;
 
-        public TokenProvider(RequestDelegate next, TokenProviderOptions options)
+        public TokenMiddleware(RequestDelegate next, TokenOptions options)
         {
             _next = next;
             _options = options;

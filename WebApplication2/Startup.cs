@@ -49,7 +49,7 @@ namespace WebApplication2
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseTokenAuthorize(new TokenProviderOptions("email")
+            app.UseTokenAuthorize(new TokenOptions("email")
             {
                 Validate = (email, password) =>
                 {
