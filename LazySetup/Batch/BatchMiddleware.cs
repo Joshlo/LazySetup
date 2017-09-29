@@ -6,12 +6,14 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using LazySetup.Helpers;
+using LazySetup.Helpers_and_Extensions;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Http.Features.Authentication;
 using Microsoft.AspNetCore.Http.Internal;
 using Newtonsoft.Json;
+
 
 namespace LazySetup.Batch
 {
@@ -49,7 +51,7 @@ namespace LazySetup.Batch
 
                 var requests = JsonConvert.DeserializeObject<IEnumerable<RequestModel>>(json);
 
-                var responseBody = new List<ResponseModel>();
+                var response = new List<ResponseModel>();
 
                 try
                 {
@@ -78,20 +80,20 @@ namespace LazySetup.Batch
                         var innerContext = _factory.Create(features);
 
                         await _next(innerContext);
-                        innerContext.Response.Body.Position = 0;
-                        var rBody = await streamHelper.StreamToJson(innerContext.Response.Body);
+                        innerContext.Response.Body.ResetPosition();
+                        var responseBody = await streamHelper.StreamToJson(innerContext.Response.Body);
 
-                        responseBody.Add(new ResponseModel
+                        response.Add(new ResponseModel
                         {
                             StatusCode = innerContext.Response.StatusCode,
                             Headers = innerContext.Response.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                            Body = JsonConvert.DeserializeObject(rBody)
+                            Body = JsonConvert.DeserializeObject(responseBody)
                         });
                     }
                 }
                 finally
                 {
-                    var responseJson = JsonConvert.SerializeObject(responseBody);
+                    var responseJson = JsonConvert.SerializeObject(response);
                     context.Response.StatusCode = 200;
                     await context.Response.WriteAsync(responseJson);
                 }

@@ -8,8 +8,8 @@ namespace LazySetup.Batch
     [Serializable]
     public class ResponseModel
     {
-        public int StatusCode { get; set; }
-        public Dictionary<string, string> Headers { get; set; }
-        public object Body { get; set; }
+        public int StatusCode { get; internal set; }
+        public Dictionary<string, string> Headers { get; internal set; }
+        public object Body { get; internal set; }
     }
 }
