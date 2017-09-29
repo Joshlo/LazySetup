@@ -1,8 +1,9 @@
-C:\Kode\lazysetup\LazySetup\bin\Release\netcoreapp2.0\LazySetup.deps.json
-C:\Kode\lazysetup\LazySetup\bin\Release\netcoreapp2.0\LazySetup.dll
-C:\Kode\lazysetup\LazySetup\bin\Release\netcoreapp2.0\LazySetup.pdb
-C:\Kode\lazysetup\LazySetup\obj\Release\netcoreapp2.0\LazySetup.csproj.CoreCompileInputs.cache
-C:\Kode\lazysetup\LazySetup\obj\Release\netcoreapp2.0\LazySetup.AssemblyInfoInputs.cache
-C:\Kode\lazysetup\LazySetup\obj\Release\netcoreapp2.0\LazySetup.AssemblyInfo.cs
-C:\Kode\lazysetup\LazySetup\obj\Release\netcoreapp2.0\LazySetup.dll
-C:\Kode\lazysetup\LazySetup\obj\Release\netcoreapp2.0\LazySetup.pdb
+C:\Kode\LazySetup\LazySetup\bin\Release\netcoreapp2.0\LazySetup.deps.json
+C:\Kode\LazySetup\LazySetup\bin\Release\netcoreapp2.0\LazySetup.dll
+C:\Kode\LazySetup\LazySetup\bin\Release\netcoreapp2.0\LazySetup.pdb
+C:\Kode\LazySetup\LazySetup\obj\Release\netcoreapp2.0\LazySetup.csproj.CoreCompileInputs.cache
+C:\Kode\LazySetup\LazySetup\obj\Release\netcoreapp2.0\LazySetup.AssemblyInfoInputs.cache
+C:\Kode\LazySetup\LazySetup\obj\Release\netcoreapp2.0\LazySetup.AssemblyInfo.cs
+C:\Kode\LazySetup\LazySetup\obj\Release\netcoreapp2.0\LazySetup.dll
+C:\Kode\LazySetup\LazySetup\obj\Release\netcoreapp2.0\LazySetup.pdb
+C:\Kode\LazySetup\LazySetup\obj\Release\netcoreapp2.0\LazySetup.csprojResolveAssemblyReference.cache

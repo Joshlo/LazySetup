@@ -17,40 +17,40 @@ namespace LazySetup.Sql
             ConnectionString = connectionString;
         }
 
-        public Task<IEnumerable<TResult>> QueryAsync<TResult>(string sql, object parameters = null)
+        public async Task<IEnumerable<TResult>> QueryAsync<TResult>(string sql, object parameters = null)
         {
             using (var connection = new SqlConnection(ConnectionString))
             {
-                connection.Open();
-                return connection.QueryAsync<TResult>(sql, parameters);
+                await connection.OpenAsync();
+                return await connection.QueryAsync<TResult>(sql, parameters);
             }
         }
 
-        public Task<IEnumerable<TResult>> QueryAsync<TFirst, TSecond, TResult>(string sql, Func<TFirst, TSecond, TResult> func, string splitOn, object parameters = null)
+        public async Task<IEnumerable<TResult>> QueryAsync<TFirst, TSecond, TResult>(string sql, Func<TFirst, TSecond, TResult> func, string splitOn, object parameters = null)
         {
             using (var connection = new SqlConnection(ConnectionString))
             {
-                connection.Open();
-                return connection.QueryAsync(sql, func, parameters, splitOn: splitOn);
+                await connection.OpenAsync();
+                return await connection.QueryAsync(sql, func, parameters, splitOn: splitOn);
             }
         }
 
-        public Task<IEnumerable<TResult>> QueryAsync<TFirst, TSecond, TThird, TResult>(string sql, Func<TFirst, TSecond, TThird, TResult> func, string splitOn, object parameters = null)
+        public async Task<IEnumerable<TResult>> QueryAsync<TFirst, TSecond, TThird, TResult>(string sql, Func<TFirst, TSecond, TThird, TResult> func, string splitOn, object parameters = null)
         {
             using (var connection = new SqlConnection(ConnectionString))
             {
-                connection.Open();
-                return connection.QueryAsync(sql, func, parameters, splitOn: splitOn);
+                await connection.OpenAsync();
+                return await connection.QueryAsync(sql, func, parameters, splitOn: splitOn);
             }
         }
 
-        public Task<IEnumerable<TResult>> QueryAsync<TFirst, TSecond, TThird, TFourth, TResult>(string sql, Func<TFirst, TSecond, TThird, TFourth, TResult> func, string splitOn,
+        public async Task<IEnumerable<TResult>> QueryAsync<TFirst, TSecond, TThird, TFourth, TResult>(string sql, Func<TFirst, TSecond, TThird, TFourth, TResult> func, string splitOn,
             object parameters = null)
         {
             using (var connection = new SqlConnection(ConnectionString))
             {
-                connection.Open();
-                return connection.QueryAsync(sql, func, parameters, splitOn: splitOn);
+                await connection.OpenAsync();
+                return await connection.QueryAsync(sql, func, parameters, splitOn: splitOn);
             }
         }
 
@@ -64,7 +64,7 @@ namespace LazySetup.Sql
         {
             using (var connection = new SqlConnection(ConnectionString))
             {
-                connection.Open();
+                await connection.OpenAsync();
                 var result = await connection.QueryMultipleAsync(sql, parameters);
                 return func(result);
             }

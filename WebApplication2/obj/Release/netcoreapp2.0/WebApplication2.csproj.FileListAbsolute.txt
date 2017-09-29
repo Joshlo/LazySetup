@@ -8,3 +8,6 @@ C:\Kode\lazysetup\WebApplication2\obj\Release\netcoreapp2.0\WebApplication2.Asse
 C:\Kode\lazysetup\WebApplication2\obj\Release\netcoreapp2.0\WebApplication2.AssemblyInfo.cs
 C:\Kode\lazysetup\WebApplication2\obj\Release\netcoreapp2.0\WebApplication2.dll
 C:\Kode\lazysetup\WebApplication2\obj\Release\netcoreapp2.0\WebApplication2.pdb
+C:\Kode\LazySetup\WebApplication2\bin\Release\netcoreapp2.0\LazySetup.dll
+C:\Kode\LazySetup\WebApplication2\bin\Release\netcoreapp2.0\LazySetup.pdb
+C:\Kode\LazySetup\WebApplication2\obj\Release\netcoreapp2.0\WebApplication2.csprojResolveAssemblyReference.cache

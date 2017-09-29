@@ -23,7 +23,7 @@
     ".NETCoreApp,Version=v2.0": {
       "WebApplication2/1.0.0": {
         "dependencies": {
-          "LazySetup": "1.0.0",
+          "LazySetup": "1.0.2",
           "Microsoft.AspNetCore.All": "2.0.0",
           "Microsoft.NETCore.App": "2.0.0"
         },
@@ -3869,7 +3869,7 @@
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
       },
-      "LazySetup/1.0.0": {
+      "LazySetup/1.0.2": {
         "dependencies": {
           "Dapper": "1.50.2",
           "Microsoft.AspNetCore.Authentication": "2.0.0",
@@ -6106,7 +6106,7 @@
       "path": "windowsazure.storage/8.1.4",
       "hashPath": "windowsazure.storage.8.1.4.nupkg.sha512"
     },
-    "LazySetup/1.0.0": {
+    "LazySetup/1.0.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

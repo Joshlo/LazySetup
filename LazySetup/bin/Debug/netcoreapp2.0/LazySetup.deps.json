@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "LazySetup/1.0.0": {
+      "LazySetup/1.0.2": {
         "dependencies": {
           "Dapper": "1.50.2",
           "Microsoft.AspNetCore.Authentication": "2.0.0",
@@ -2089,7 +2089,7 @@
     }
   },
   "libraries": {
-    "LazySetup/1.0.0": {
+    "LazySetup/1.0.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -4825,7 +4825,7 @@
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
       },
-      "LazySetup/1.0.0": {
+      "LazySetup/1.0.2": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
@@ -12693,7 +12693,7 @@
         "windowsazure.storage.nuspec"
       ]
     },
-    "LazySetup/1.0.0": {
+    "LazySetup/1.0.2": {
       "type": "project",
       "path": "../LazySetup/LazySetup.csproj",
       "msbuildProject": "../LazySetup/LazySetup.csproj"
@@ -12701,7 +12701,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
-      "LazySetup >= 1.0.0",
+      "LazySetup >= 1.0.2",
       "Microsoft.AspNetCore.All >= 2.0.0",
       "Microsoft.NETCore.App >= 2.0.0"
     ]

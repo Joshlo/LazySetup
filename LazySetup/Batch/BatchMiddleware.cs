@@ -5,7 +5,6 @@ using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
-using LazySetup.Helpers;
 using LazySetup.Helpers_and_Extensions;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
@@ -59,7 +58,7 @@ namespace LazySetup.Batch
                     {
                         var newRequest = new HttpRequestFeature
                         {
-                            Body = request.Body != null ? new MemoryStream(Encoding.ASCII.GetBytes(request.Body)) : null,
+                            Body = request.Body != null ? new MemoryStream(Encoding.ASCII.GetBytes(request.Body.ToString())) : null,
                             Headers = context.Request.Headers,
                             Method = request.Method,
                             Path = request.RelativeUrl,
@@ -69,7 +68,7 @@ namespace LazySetup.Batch
                             QueryString = string.Empty
                         };
 
-                        var newRespone = new HttpResponseFeature { Body = new MemoryStream() };
+                        var newRespone = new HttpResponseFeature { Body = new MemoryStream()};
                         var requestLifetimeFeature = new HttpRequestLifetimeFeature();
 
                         var features = CreateDefaultFeatures(context.Features);
