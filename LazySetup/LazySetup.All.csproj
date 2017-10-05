@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Version>1.0.0</Version>
+    <Description>This is a small package for the lazy developer that hates writing the same initial setup everytime they want to start a new dotnet core 2.0 api/mvc project</Description>
+    <PackageProjectUrl>https://github.com/Joshlo/LazySetup</PackageProjectUrl>
+    <Authors>Kenneth Pedersen</Authors>
+    <Company></Company>
+    <PackageId>LazySetup.All</PackageId>
+    <AssemblyName>LazySetup.All</AssemblyName>
+    <RootNamespace>LazySetup.All</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Batch\LazySetup.Batch\LazySetup.Batch.csproj" />
+    <ProjectReference Include="..\LazySetup.Elasticsearch\LazySetup.Elasticsearch.csproj" />
+    <ProjectReference Include="..\LazySetup.Redis\LazySetup.Redis.csproj" />
+    <ProjectReference Include="..\Sql\LazySetup.Sql\LazySetup.Sql.csproj" />
+    <ProjectReference Include="..\Token\LazySetup.Token\LazySetup.Token.csproj" />
+    <ProjectReference Include="..\Tracking\LazySetup.Tracking\LazySetup.Tracking.csproj" />
+  </ItemGroup>
+
+</Project>

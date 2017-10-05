@@ -3186,6 +3186,113 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "LazySetup.Batch/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "LazySetup.HelpersAndExtensions": "1.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.0.0",
+          "Microsoft.AspNetCore.Mvc": "2.0.0",
+          "Microsoft.Extensions.DependencyInjection": "2.0.0",
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "compile": {
+          "bin/placeholder/LazySetup.Batch.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LazySetup.Batch.dll": {}
+        }
+      },
+      "LazySetup.Elasticsearch/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "2.0.0",
+          "NEST": "5.5.0",
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "compile": {
+          "bin/placeholder/LazySetup.Elasticsearch.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LazySetup.Elasticsearch.dll": {}
+        }
+      },
+      "LazySetup.HelpersAndExtensions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "2.0.0",
+          "Newtonsoft.Json": "10.0.3"
+        },
+        "compile": {
+          "bin/placeholder/LazySetup.HelpersAndExtensions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LazySetup.HelpersAndExtensions.dll": {}
+        }
+      },
+      "LazySetup.Redis/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "LazySetup.HelpersAndExtensions": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection": "2.0.0",
+          "Newtonsoft.Json": "10.0.3",
+          "StackExchange.Redis": "1.2.6"
+        },
+        "compile": {
+          "bin/placeholder/LazySetup.Redis.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LazySetup.Redis.dll": {}
+        }
+      },
+      "LazySetup.Sql/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Dapper": "1.50.2",
+          "Microsoft.Extensions.DependencyInjection": "2.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LazySetup.Sql.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LazySetup.Sql.dll": {}
+        }
+      },
+      "LazySetup.Token/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication": "2.0.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "2.0.0",
+          "Microsoft.AspNetCore.Mvc": "2.0.0",
+          "Microsoft.Extensions.DependencyInjection": "2.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LazySetup.Token.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LazySetup.Token.dll": {}
+        }
+      },
+      "LazySetup.Tracking/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "LazySetup.HelpersAndExtensions": "1.0.0",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.0.0",
+          "Microsoft.Extensions.DependencyInjection": "2.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LazySetup.Tracking.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LazySetup.Tracking.dll": {}
+        }
       }
     }
   },
@@ -9223,24 +9330,52 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "LazySetup.Batch/1.0.0": {
+      "type": "project",
+      "path": "../Batch/LazySetup.Batch/LazySetup.Batch.csproj",
+      "msbuildProject": "../Batch/LazySetup.Batch/LazySetup.Batch.csproj"
+    },
+    "LazySetup.Elasticsearch/1.0.0": {
+      "type": "project",
+      "path": "../LazySetup.Elasticsearch/LazySetup.Elasticsearch.csproj",
+      "msbuildProject": "../LazySetup.Elasticsearch/LazySetup.Elasticsearch.csproj"
+    },
+    "LazySetup.HelpersAndExtensions/1.0.0": {
+      "type": "project",
+      "path": "../LazySetup.HelpersAndExtensions/LazySetup.HelpersAndExtensions.csproj",
+      "msbuildProject": "../LazySetup.HelpersAndExtensions/LazySetup.HelpersAndExtensions.csproj"
+    },
+    "LazySetup.Redis/1.0.0": {
+      "type": "project",
+      "path": "../LazySetup.Redis/LazySetup.Redis.csproj",
+      "msbuildProject": "../LazySetup.Redis/LazySetup.Redis.csproj"
+    },
+    "LazySetup.Sql/1.0.0": {
+      "type": "project",
+      "path": "../Sql/LazySetup.Sql/LazySetup.Sql.csproj",
+      "msbuildProject": "../Sql/LazySetup.Sql/LazySetup.Sql.csproj"
+    },
+    "LazySetup.Token/1.0.0": {
+      "type": "project",
+      "path": "../Token/LazySetup.Token/LazySetup.Token.csproj",
+      "msbuildProject": "../Token/LazySetup.Token/LazySetup.Token.csproj"
+    },
+    "LazySetup.Tracking/1.0.0": {
+      "type": "project",
+      "path": "../Tracking/LazySetup.Tracking/LazySetup.Tracking.csproj",
+      "msbuildProject": "../Tracking/LazySetup.Tracking/LazySetup.Tracking.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
-      "Dapper >= 1.50.2",
-      "Microsoft.AspNetCore.Authentication >= 2.0.0",
-      "Microsoft.AspNetCore.Authentication.JwtBearer >= 2.0.0",
-      "Microsoft.AspNetCore.Authorization >= 2.0.0",
-      "Microsoft.AspNetCore.Http.Abstractions >= 2.0.0",
-      "Microsoft.AspNetCore.Mvc >= 2.0.0",
-      "Microsoft.Extensions.DependencyInjection >= 2.0.0",
-      "Microsoft.Extensions.Options >= 2.0.0",
-      "Microsoft.IdentityModel.Tokens >= 5.1.4",
-      "Microsoft.NETCore.App >= 2.0.0",
-      "NEST >= 5.5.0",
-      "Newtonsoft.Json >= 10.0.3",
-      "StackExchange.Redis >= 1.2.6",
-      "System.IdentityModel.Tokens.Jwt >= 5.1.4"
+      "LazySetup.Batch >= 1.0.0",
+      "LazySetup.Elasticsearch >= 1.0.0",
+      "LazySetup.Redis >= 1.0.0",
+      "LazySetup.Sql >= 1.0.0",
+      "LazySetup.Token >= 1.0.0",
+      "LazySetup.Tracking >= 1.0.0",
+      "Microsoft.NETCore.App >= 2.0.0"
     ]
   },
   "packageFolders": {
@@ -9248,14 +9383,14 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.2",
+    "version": "1.0.0",
     "restoreSettings": {
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Kode\\LazySetup\\LazySetup\\LazySetup.csproj",
-      "projectName": "LazySetup",
-      "projectPath": "C:\\Kode\\LazySetup\\LazySetup\\LazySetup.csproj",
+      "projectUniqueName": "C:\\Kode\\LazySetup\\LazySetup\\LazySetup.All.csproj",
+      "projectName": "LazySetup.All",
+      "projectPath": "C:\\Kode\\LazySetup\\LazySetup\\LazySetup.All.csproj",
       "packagesPath": "C:\\Users\\kpedersen\\.nuget\\packages\\",
       "outputPath": "C:\\Kode\\LazySetup\\LazySetup\\obj\\",
       "projectStyle": "PackageReference",
@@ -9275,7 +9410,26 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Kode\\LazySetup\\Token\\LazySetup.Token\\LazySetup.Token.csproj": {
+              "projectPath": "C:\\Kode\\LazySetup\\Token\\LazySetup.Token\\LazySetup.Token.csproj"
+            },
+            "C:\\Kode\\LazySetup\\Tracking\\LazySetup.Tracking\\LazySetup.Tracking.csproj": {
+              "projectPath": "C:\\Kode\\LazySetup\\Tracking\\LazySetup.Tracking\\LazySetup.Tracking.csproj"
+            },
+            "C:\\Kode\\LazySetup\\LazySetup.Elasticsearch\\LazySetup.Elasticsearch.csproj": {
+              "projectPath": "C:\\Kode\\LazySetup\\LazySetup.Elasticsearch\\LazySetup.Elasticsearch.csproj"
+            },
+            "C:\\Kode\\LazySetup\\Sql\\LazySetup.Sql\\LazySetup.Sql.csproj": {
+              "projectPath": "C:\\Kode\\LazySetup\\Sql\\LazySetup.Sql\\LazySetup.Sql.csproj"
+            },
+            "C:\\Kode\\LazySetup\\LazySetup.Redis\\LazySetup.Redis.csproj": {
+              "projectPath": "C:\\Kode\\LazySetup\\LazySetup.Redis\\LazySetup.Redis.csproj"
+            },
+            "C:\\Kode\\LazySetup\\Batch\\LazySetup.Batch\\LazySetup.Batch.csproj": {
+              "projectPath": "C:\\Kode\\LazySetup\\Batch\\LazySetup.Batch\\LazySetup.Batch.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -9287,63 +9441,11 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "System.IdentityModel.Tokens.Jwt": {
-            "target": "Package",
-            "version": "5.1.4"
-          },
-          "Dapper": {
-            "target": "Package",
-            "version": "1.50.2"
-          },
-          "Microsoft.Extensions.DependencyInjection": {
-            "target": "Package",
-            "version": "2.0.0"
-          },
-          "StackExchange.Redis": {
-            "target": "Package",
-            "version": "1.2.6"
-          },
-          "Microsoft.IdentityModel.Tokens": {
-            "target": "Package",
-            "version": "5.1.4"
-          },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
             "version": "2.0.0",
             "autoReferenced": true
-          },
-          "Microsoft.AspNetCore.Authentication.JwtBearer": {
-            "target": "Package",
-            "version": "2.0.0"
-          },
-          "Microsoft.Extensions.Options": {
-            "target": "Package",
-            "version": "2.0.0"
-          },
-          "Microsoft.AspNetCore.Mvc": {
-            "target": "Package",
-            "version": "2.0.0"
-          },
-          "Microsoft.AspNetCore.Authentication": {
-            "target": "Package",
-            "version": "2.0.0"
-          },
-          "Microsoft.AspNetCore.Http.Abstractions": {
-            "target": "Package",
-            "version": "2.0.0"
-          },
-          "Microsoft.AspNetCore.Authorization": {
-            "target": "Package",
-            "version": "2.0.0"
-          },
-          "Newtonsoft.Json": {
-            "target": "Package",
-            "version": "10.0.3"
-          },
-          "NEST": {
-            "target": "Package",
-            "version": "5.5.0"
           }
         },
         "imports": [

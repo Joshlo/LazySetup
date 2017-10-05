@@ -9,5 +9,5 @@ C:\Kode\lazysetup\WebApplication2\obj\Debug\netcoreapp2.0\WebApplication2.Assemb
 C:\Kode\lazysetup\WebApplication2\obj\Debug\netcoreapp2.0\WebApplication2.AssemblyInfo.cs
 C:\Kode\lazysetup\WebApplication2\obj\Debug\netcoreapp2.0\WebApplication2.dll
 C:\Kode\lazysetup\WebApplication2\obj\Debug\netcoreapp2.0\WebApplication2.pdb
-C:\Kode\lazysetup\WebApplication2\bin\Debug\netcoreapp2.0\LazySetup.dll
-C:\Kode\lazysetup\WebApplication2\bin\Debug\netcoreapp2.0\LazySetup.pdb
+C:\Kode\LazySetup\WebApplication2\bin\Debug\netcoreapp2.0\LazySetup.All.dll
+C:\Kode\LazySetup\WebApplication2\bin\Debug\netcoreapp2.0\LazySetup.All.pdb

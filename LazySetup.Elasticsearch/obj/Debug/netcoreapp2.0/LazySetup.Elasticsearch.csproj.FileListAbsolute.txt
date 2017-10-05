@@ -1,0 +1,9 @@
+C:\Kode\LazySetup\LazySetup.Elasticsearch\bin\Debug\netcoreapp2.0\LazySetup.Elasticsearch.deps.json
+C:\Kode\LazySetup\LazySetup.Elasticsearch\bin\Debug\netcoreapp2.0\LazySetup.Elasticsearch.dll
+C:\Kode\LazySetup\LazySetup.Elasticsearch\obj\Debug\netcoreapp2.0\LazySetup.Elasticsearch.csproj.CoreCompileInputs.cache
+C:\Kode\LazySetup\LazySetup.Elasticsearch\obj\Debug\netcoreapp2.0\LazySetup.Elasticsearch.AssemblyInfoInputs.cache
+C:\Kode\LazySetup\LazySetup.Elasticsearch\obj\Debug\netcoreapp2.0\LazySetup.Elasticsearch.AssemblyInfo.cs
+C:\Kode\LazySetup\LazySetup.Elasticsearch\obj\Debug\netcoreapp2.0\LazySetup.Elasticsearch.csprojResolveAssemblyReference.cache
+C:\Kode\LazySetup\LazySetup.Elasticsearch\bin\Debug\netcoreapp2.0\LazySetup.Elasticsearch.pdb
+C:\Kode\LazySetup\LazySetup.Elasticsearch\obj\Debug\netcoreapp2.0\LazySetup.Elasticsearch.dll
+C:\Kode\LazySetup\LazySetup.Elasticsearch\obj\Debug\netcoreapp2.0\LazySetup.Elasticsearch.pdb

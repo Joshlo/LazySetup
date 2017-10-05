@@ -1,0 +1,11 @@
+C:\Kode\LazySetup\Tracking\LazySetup.Tracking\obj\Debug\netcoreapp2.0\LazySetup.Tracking.csproj.CoreCompileInputs.cache
+C:\Kode\LazySetup\Tracking\LazySetup.Tracking\obj\Debug\netcoreapp2.0\LazySetup.Tracking.AssemblyInfoInputs.cache
+C:\Kode\LazySetup\Tracking\LazySetup.Tracking\obj\Debug\netcoreapp2.0\LazySetup.Tracking.AssemblyInfo.cs
+C:\Kode\LazySetup\Tracking\LazySetup.Tracking\obj\Debug\netcoreapp2.0\LazySetup.Tracking.csprojResolveAssemblyReference.cache
+C:\Kode\LazySetup\Tracking\LazySetup.Tracking\bin\Debug\netcoreapp2.0\LazySetup.Tracking.deps.json
+C:\Kode\LazySetup\Tracking\LazySetup.Tracking\bin\Debug\netcoreapp2.0\LazySetup.Tracking.dll
+C:\Kode\LazySetup\Tracking\LazySetup.Tracking\bin\Debug\netcoreapp2.0\LazySetup.HelpersAndExtensions.dll
+C:\Kode\LazySetup\Tracking\LazySetup.Tracking\bin\Debug\netcoreapp2.0\LazySetup.HelpersAndExtensions.pdb
+C:\Kode\LazySetup\Tracking\LazySetup.Tracking\bin\Debug\netcoreapp2.0\LazySetup.Tracking.pdb
+C:\Kode\LazySetup\Tracking\LazySetup.Tracking\obj\Debug\netcoreapp2.0\LazySetup.Tracking.dll
+C:\Kode\LazySetup\Tracking\LazySetup.Tracking\obj\Debug\netcoreapp2.0\LazySetup.Tracking.pdb

@@ -1,0 +1,9 @@
+C:\Kode\LazySetup\Token\LazySetup.Token\obj\Debug\netcoreapp2.0\LazySetup.Token.csprojResolveAssemblyReference.cache
+C:\Kode\LazySetup\Token\LazySetup.Token\obj\Debug\netcoreapp2.0\LazySetup.Token.csproj.CoreCompileInputs.cache
+C:\Kode\LazySetup\Token\LazySetup.Token\obj\Debug\netcoreapp2.0\LazySetup.Token.AssemblyInfoInputs.cache
+C:\Kode\LazySetup\Token\LazySetup.Token\obj\Debug\netcoreapp2.0\LazySetup.Token.AssemblyInfo.cs
+C:\Kode\LazySetup\Token\LazySetup.Token\bin\Debug\netcoreapp2.0\LazySetup.Token.deps.json
+C:\Kode\LazySetup\Token\LazySetup.Token\bin\Debug\netcoreapp2.0\LazySetup.Token.dll
+C:\Kode\LazySetup\Token\LazySetup.Token\bin\Debug\netcoreapp2.0\LazySetup.Token.pdb
+C:\Kode\LazySetup\Token\LazySetup.Token\obj\Debug\netcoreapp2.0\LazySetup.Token.dll
+C:\Kode\LazySetup\Token\LazySetup.Token\obj\Debug\netcoreapp2.0\LazySetup.Token.pdb
