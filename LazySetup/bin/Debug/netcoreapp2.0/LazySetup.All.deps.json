@@ -2103,7 +2103,8 @@
       },
       "LazySetup.HelpersAndExtensions/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Abstractions": "2.0.0"
+          "Microsoft.AspNetCore.Http.Abstractions": "2.0.0",
+          "Newtonsoft.Json": "10.0.3"
         },
         "runtime": {
           "LazySetup.HelpersAndExtensions.dll": {}
@@ -2111,6 +2112,7 @@
       },
       "LazySetup.Redis/1.0.0": {
         "dependencies": {
+          "LazySetup.HelpersAndExtensions": "1.0.0",
           "Microsoft.Extensions.DependencyInjection": "2.0.0",
           "Newtonsoft.Json": "10.0.3",
           "StackExchange.Redis": "1.2.6"

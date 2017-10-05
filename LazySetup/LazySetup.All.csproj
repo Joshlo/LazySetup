@@ -14,8 +14,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Batch\LazySetup.Batch\LazySetup.Batch.csproj" />
-    <ProjectReference Include="..\LazySetup.Elasticsearch\LazySetup.Elasticsearch.csproj" />
-    <ProjectReference Include="..\LazySetup.Redis\LazySetup.Redis.csproj" />
+    <ProjectReference Include="..\Elasticsearch\LazySetup.Elasticsearch\LazySetup.Elasticsearch.csproj" />
+    <ProjectReference Include="..\Redis\LazySetup.Redis\LazySetup.Redis.csproj" />
     <ProjectReference Include="..\Sql\LazySetup.Sql\LazySetup.Sql.csproj" />
     <ProjectReference Include="..\Token\LazySetup.Token\LazySetup.Token.csproj" />
     <ProjectReference Include="..\Tracking\LazySetup.Tracking\LazySetup.Tracking.csproj" />

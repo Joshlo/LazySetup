@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\LazySetup.HelpersAndExtensions\LazySetup.HelpersAndExtensions.csproj" />
+    <ProjectReference Include="..\..\HelpersAndExtensions\LazySetup.HelpersAndExtensions\LazySetup.HelpersAndExtensions.csproj" />
   </ItemGroup>
 
 </Project>

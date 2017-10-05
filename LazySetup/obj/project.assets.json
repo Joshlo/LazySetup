@@ -9338,18 +9338,18 @@
     },
     "LazySetup.Elasticsearch/1.0.0": {
       "type": "project",
-      "path": "../LazySetup.Elasticsearch/LazySetup.Elasticsearch.csproj",
-      "msbuildProject": "../LazySetup.Elasticsearch/LazySetup.Elasticsearch.csproj"
+      "path": "../Elasticsearch/LazySetup.Elasticsearch/LazySetup.Elasticsearch.csproj",
+      "msbuildProject": "../Elasticsearch/LazySetup.Elasticsearch/LazySetup.Elasticsearch.csproj"
     },
     "LazySetup.HelpersAndExtensions/1.0.0": {
       "type": "project",
-      "path": "../LazySetup.HelpersAndExtensions/LazySetup.HelpersAndExtensions.csproj",
-      "msbuildProject": "../LazySetup.HelpersAndExtensions/LazySetup.HelpersAndExtensions.csproj"
+      "path": "../HelpersAndExtensions/LazySetup.HelpersAndExtensions/LazySetup.HelpersAndExtensions.csproj",
+      "msbuildProject": "../HelpersAndExtensions/LazySetup.HelpersAndExtensions/LazySetup.HelpersAndExtensions.csproj"
     },
     "LazySetup.Redis/1.0.0": {
       "type": "project",
-      "path": "../LazySetup.Redis/LazySetup.Redis.csproj",
-      "msbuildProject": "../LazySetup.Redis/LazySetup.Redis.csproj"
+      "path": "../Redis/LazySetup.Redis/LazySetup.Redis.csproj",
+      "msbuildProject": "../Redis/LazySetup.Redis/LazySetup.Redis.csproj"
     },
     "LazySetup.Sql/1.0.0": {
       "type": "project",
@@ -9417,14 +9417,14 @@
             "C:\\Kode\\LazySetup\\Tracking\\LazySetup.Tracking\\LazySetup.Tracking.csproj": {
               "projectPath": "C:\\Kode\\LazySetup\\Tracking\\LazySetup.Tracking\\LazySetup.Tracking.csproj"
             },
-            "C:\\Kode\\LazySetup\\LazySetup.Elasticsearch\\LazySetup.Elasticsearch.csproj": {
-              "projectPath": "C:\\Kode\\LazySetup\\LazySetup.Elasticsearch\\LazySetup.Elasticsearch.csproj"
-            },
             "C:\\Kode\\LazySetup\\Sql\\LazySetup.Sql\\LazySetup.Sql.csproj": {
               "projectPath": "C:\\Kode\\LazySetup\\Sql\\LazySetup.Sql\\LazySetup.Sql.csproj"
             },
-            "C:\\Kode\\LazySetup\\LazySetup.Redis\\LazySetup.Redis.csproj": {
-              "projectPath": "C:\\Kode\\LazySetup\\LazySetup.Redis\\LazySetup.Redis.csproj"
+            "C:\\Kode\\LazySetup\\Elasticsearch\\LazySetup.Elasticsearch\\LazySetup.Elasticsearch.csproj": {
+              "projectPath": "C:\\Kode\\LazySetup\\Elasticsearch\\LazySetup.Elasticsearch\\LazySetup.Elasticsearch.csproj"
+            },
+            "C:\\Kode\\LazySetup\\Redis\\LazySetup.Redis\\LazySetup.Redis.csproj": {
+              "projectPath": "C:\\Kode\\LazySetup\\Redis\\LazySetup.Redis\\LazySetup.Redis.csproj"
             },
             "C:\\Kode\\LazySetup\\Batch\\LazySetup.Batch\\LazySetup.Batch.csproj": {
               "projectPath": "C:\\Kode\\LazySetup\\Batch\\LazySetup.Batch\\LazySetup.Batch.csproj"

@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Authors>Joshlo</Authors>
+    <Company />
+    <Description />
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/joshlo/lazysetup/batch</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/joshlo/lazysetup/batch</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\LazySetup.HelpersAndExtensions\LazySetup.HelpersAndExtensions.csproj" />
+    <ProjectReference Include="..\..\HelpersAndExtensions\LazySetup.HelpersAndExtensions\LazySetup.HelpersAndExtensions.csproj" />
   </ItemGroup>
 
 </Project>

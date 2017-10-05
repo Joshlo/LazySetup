@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LazySetup.Batch", "Batch\La
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helpers And Extensions", "Helpers And Extensions", "{346659A3-7229-4B35-BD8B-B63FC7169738}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LazySetup.HelpersAndExtensions", "LazySetup.HelpersAndExtensions\LazySetup.HelpersAndExtensions.csproj", "{891CAE81-C6CF-4D48-A6F0-D414EE08F72E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LazySetup.HelpersAndExtensions", "HelpersAndExtensions\LazySetup.HelpersAndExtensions\LazySetup.HelpersAndExtensions.csproj", "{891CAE81-C6CF-4D48-A6F0-D414EE08F72E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tracking", "Tracking", "{3FA87022-3BB3-44B4-A5E3-092B43F419DA}"
 EndProject
@@ -27,11 +27,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LazySetup.Sql", "Sql\LazySe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Redis", "Redis", "{3A484D44-D8B5-499B-9ACB-057C0981BF3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LazySetup.Redis", "LazySetup.Redis\LazySetup.Redis.csproj", "{3E393647-259E-4D98-86AC-C9A53606D1DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LazySetup.Redis", "Redis\LazySetup.Redis\LazySetup.Redis.csproj", "{3E393647-259E-4D98-86AC-C9A53606D1DE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elasticsearch", "Elasticsearch", "{1E61FB13-A4F0-4BD7-9A06-B3C7365E521B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LazySetup.Elasticsearch", "LazySetup.Elasticsearch\LazySetup.Elasticsearch.csproj", "{77F71F00-D7F7-4472-8808-9AD8A20E14EB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LazySetup.Elasticsearch", "Elasticsearch\LazySetup.Elasticsearch\LazySetup.Elasticsearch.csproj", "{77F71F00-D7F7-4472-8808-9AD8A20E14EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

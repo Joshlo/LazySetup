@@ -3742,8 +3742,8 @@
     },
     "LazySetup.HelpersAndExtensions/1.0.0": {
       "type": "project",
-      "path": "../../LazySetup.HelpersAndExtensions/LazySetup.HelpersAndExtensions.csproj",
-      "msbuildProject": "../../LazySetup.HelpersAndExtensions/LazySetup.HelpersAndExtensions.csproj"
+      "path": "../../HelpersAndExtensions/LazySetup.HelpersAndExtensions/LazySetup.HelpersAndExtensions.csproj",
+      "msbuildProject": "../../HelpersAndExtensions/LazySetup.HelpersAndExtensions/LazySetup.HelpersAndExtensions.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3787,8 +3787,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Kode\\LazySetup\\LazySetup.HelpersAndExtensions\\LazySetup.HelpersAndExtensions.csproj": {
-              "projectPath": "C:\\Kode\\LazySetup\\LazySetup.HelpersAndExtensions\\LazySetup.HelpersAndExtensions.csproj"
+            "C:\\Kode\\LazySetup\\HelpersAndExtensions\\LazySetup.HelpersAndExtensions\\LazySetup.HelpersAndExtensions.csproj": {
+              "projectPath": "C:\\Kode\\LazySetup\\HelpersAndExtensions\\LazySetup.HelpersAndExtensions\\LazySetup.HelpersAndExtensions.csproj"
             }
           }
         }

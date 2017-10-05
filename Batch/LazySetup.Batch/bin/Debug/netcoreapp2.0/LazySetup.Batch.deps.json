@@ -1606,7 +1606,8 @@
       },
       "LazySetup.HelpersAndExtensions/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Abstractions": "2.0.0"
+          "Microsoft.AspNetCore.Http.Abstractions": "2.0.0",
+          "Newtonsoft.Json": "10.0.3"
         },
         "runtime": {
           "LazySetup.HelpersAndExtensions.dll": {}
