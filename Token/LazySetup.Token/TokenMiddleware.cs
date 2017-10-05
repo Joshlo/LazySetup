@@ -5,8 +5,10 @@ using System.IO;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Internal;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 
@@ -16,9 +18,11 @@ namespace LazySetup.Token
     {
         private readonly RequestDelegate _next;
         private readonly TokenOptions _options;
+        private readonly ITokenValidation _tokenValidator;
 
-        public TokenMiddleware(RequestDelegate next, TokenOptions options)
+        public TokenMiddleware(RequestDelegate next, IApplicationBuilder app, TokenOptions options)
         {
+            _tokenValidator = app.ApplicationServices.GetRequiredService<ITokenValidation>();
             _next = next;
             _options = options;
         }
@@ -32,40 +36,41 @@ namespace LazySetup.Token
             }
             if (context.Request.Method.Equals("POST"))
             {
-                var username = "";
-                var password = "";
-                if (context.Request.HasFormContentType)
-                {
-                    username = context.Request.Form["identifier"];
-                    password = context.Request.Form["password"];
-                }
-                else
-                {
-                    context.Request.EnableRewind();
+                context.Request.EnableRewind();
 
-                    var bodyStream = new StreamReader(context.Request.Body);
-                    var json = await bodyStream.ReadToEndAsync();
+                var bodyStream = new StreamReader(context.Request.Body);
+                var json = await bodyStream.ReadToEndAsync();
 
-                    var obj = JsonConvert.DeserializeObject<dynamic>(json);
-
-                    password = obj.password;
-                    username = obj.identifier;
-                }
-
+                var model = JsonConvert.DeserializeObject<TokenRequest>(json);
+                
                 TokenClaims identity;
 
-                if (_options.ValidateAsync != null)
-                    identity = await _options.ValidateAsync(username, password);
-                else
-                    identity = _options.Validate(username, password);
-
-                if (identity == null)
+                if (model.Grant_type.ToLower() == "refresh_token")
                 {
-                    context.Response.StatusCode = 400;
-                    await context.Response.WriteAsync($"Invalid {_options.Identifier} or password");
-                    return;
-                }
+                    identity = await _tokenValidator.ValidateAsync(model.Refresh_token);
 
+                    if (identity == null)
+                    {
+                        context.Response.StatusCode = 400;
+                        await context.Response.WriteAsync($"Invalid refresh_token: {model.Refresh_token}");
+                        return;
+                    }
+                }
+                else
+                {
+                    identity = await _tokenValidator.ValidateAsync(model.Identifier, model.Password);
+
+                    if (identity == null)
+                    {
+                        context.Response.StatusCode = 400;
+                        await context.Response.WriteAsync($"Invalid {_options.Identifier} or password");
+                        return;
+                    }
+
+                    model.Refresh_token = Guid.NewGuid().ToString().Replace("-", "");
+                    await _tokenValidator.StoreRefreshTokenAsync(model.Refresh_token);
+                }
+                
                 var now = DateTime.UtcNow;
                 var claims = new List<Claim>();
 
@@ -73,7 +78,7 @@ namespace LazySetup.Token
 
                 foreach (var prop in type.GetProperties())
                 {
-                    if(prop.GetValue(identity) != null)
+                    if (prop.GetValue(identity) != null)
                         claims.Add(new Claim(prop.Name, prop.GetValue(identity).ToString(), prop.PropertyType.ToString()));
                 }
 
@@ -91,7 +96,8 @@ namespace LazySetup.Token
                 var response = new
                 {
                     access_token = encodedJwt,
-                    expires_in = (int)_options.Expiration.TotalSeconds
+                    expires_in = (int)_options.Expiration.TotalSeconds,
+                    refresh_token = model.Refresh_token
                 };
 
                 context.Response.ContentType = "application/json";

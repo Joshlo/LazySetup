@@ -13,9 +13,6 @@ namespace LazySetup.Token
         public string Path { get; set; } = "/token";
 
         public string Identifier { get; }
-
-        public Func<string, string, Task<TokenClaims>> ValidateAsync { get; set; } = null;
-        public Func<string, string, TokenClaims> Validate { get; set; } = null;
         
         /// <summary>
         /// Defaults to "LazySetup"
