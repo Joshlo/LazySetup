@@ -1,4 +1,11 @@
 # Sql setup
 
-This is quite simple to setup.
-All you have to do is in your startup.cs in the service section is ```services.AddSql(<your connectionstring>);```
+### Startup.cs
+```
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddSql("<Insert connectionstring here>")
+}
+```
+
+And when to use it, you just inject ```ISqlProvider``` into the constructor and from there it's Dapper
