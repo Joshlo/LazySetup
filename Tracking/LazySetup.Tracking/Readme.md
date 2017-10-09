@@ -20,3 +20,7 @@ Last but not least there must be an implementation for **ITrackingHandler**.
 
 ## Authors
 * **Kenneth G. Pedersen** [Joshlo](https://github.com/joshlo)
+
+## License
+
+[License](https://github.com/joshlo/license.md)

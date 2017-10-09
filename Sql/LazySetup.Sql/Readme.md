@@ -30,3 +30,7 @@ public Task<IEnumerable<T>> GetUser(int id)
 
 ## Authors
 * **Kenneth G. Pedersen** [Joshlo](https://github.com/joshlo)
+
+## License
+
+[License](https://github.com/joshlo/license.md)

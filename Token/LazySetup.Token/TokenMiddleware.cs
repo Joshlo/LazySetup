@@ -79,7 +79,7 @@ namespace LazySetup.Token
                 foreach (var prop in type.GetProperties())
                 {
                     if (prop.GetValue(identity) != null)
-                        claims.Add(new Claim(prop.Name, prop.GetValue(identity).ToString(), prop.PropertyType.ToString()));
+                        claims.Add(new Claim(prop.Name, prop.GetValue(identity).ToString()));
                 }
 
                 var jwt = new JwtSecurityToken(

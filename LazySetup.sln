@@ -1,37 +1,43 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.15
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazySetup.All", "LazySetup\LazySetup.All.csproj", "{78BCFEE5-EE18-42BB-9D0B-7DADE2FA57B5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Token", "Token", "{8FCDDEDB-1B28-49E1-B8CE-F1DB7E3AD85F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LazySetup.Token", "Token\LazySetup.Token\LazySetup.Token.csproj", "{F8BDD81B-9CF7-4336-90CF-CBAA8A16515D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazySetup.Token", "Token\LazySetup.Token\LazySetup.Token.csproj", "{F8BDD81B-9CF7-4336-90CF-CBAA8A16515D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Batch", "Batch", "{882E7606-72B5-498B-8218-721E2B881352}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LazySetup.Batch", "Batch\LazySetup.Batch\LazySetup.Batch.csproj", "{EA8CA6F0-581C-4905-9338-85313AE40376}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazySetup.Batch", "Batch\LazySetup.Batch\LazySetup.Batch.csproj", "{EA8CA6F0-581C-4905-9338-85313AE40376}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helpers And Extensions", "Helpers And Extensions", "{346659A3-7229-4B35-BD8B-B63FC7169738}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LazySetup.HelpersAndExtensions", "HelpersAndExtensions\LazySetup.HelpersAndExtensions\LazySetup.HelpersAndExtensions.csproj", "{891CAE81-C6CF-4D48-A6F0-D414EE08F72E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazySetup.HelpersAndExtensions", "HelpersAndExtensions\LazySetup.HelpersAndExtensions\LazySetup.HelpersAndExtensions.csproj", "{891CAE81-C6CF-4D48-A6F0-D414EE08F72E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tracking", "Tracking", "{3FA87022-3BB3-44B4-A5E3-092B43F419DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LazySetup.Tracking", "Tracking\LazySetup.Tracking\LazySetup.Tracking.csproj", "{DAEA115E-47F9-4323-BA42-4E67DF3EA690}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazySetup.Tracking", "Tracking\LazySetup.Tracking\LazySetup.Tracking.csproj", "{DAEA115E-47F9-4323-BA42-4E67DF3EA690}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sql", "Sql", "{A904B2D0-4774-4B9A-A635-66F1FBB6B6B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LazySetup.Sql", "Sql\LazySetup.Sql\LazySetup.Sql.csproj", "{5FED6A77-12CE-48DD-8128-D7A22DCE6308}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazySetup.Sql", "Sql\LazySetup.Sql\LazySetup.Sql.csproj", "{5FED6A77-12CE-48DD-8128-D7A22DCE6308}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Redis", "Redis", "{3A484D44-D8B5-499B-9ACB-057C0981BF3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LazySetup.Redis", "Redis\LazySetup.Redis\LazySetup.Redis.csproj", "{3E393647-259E-4D98-86AC-C9A53606D1DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazySetup.Redis", "Redis\LazySetup.Redis\LazySetup.Redis.csproj", "{3E393647-259E-4D98-86AC-C9A53606D1DE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elasticsearch", "Elasticsearch", "{1E61FB13-A4F0-4BD7-9A06-B3C7365E521B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LazySetup.Elasticsearch", "Elasticsearch\LazySetup.Elasticsearch\LazySetup.Elasticsearch.csproj", "{77F71F00-D7F7-4472-8808-9AD8A20E14EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazySetup.Elasticsearch", "Elasticsearch\LazySetup.Elasticsearch\LazySetup.Elasticsearch.csproj", "{77F71F00-D7F7-4472-8808-9AD8A20E14EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{440C8A74-B439-4FF8-A6A4-3A4F31CC1834}"
+	ProjectSection(SolutionItems) = preProject
+		License.md = License.md
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -6,7 +6,6 @@ namespace LazySetup.Token
 {
     public class TokenClaims
     {
-        public string Sub { get; set; }
-        public string Type { get; set; }
+
     }
 }
