@@ -8276,6 +8276,9 @@
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
       "projectUniqueName": "C:\\Kode\\LazySetup\\Token\\LazySetup.Token\\LazySetup.Token.csproj",
       "projectName": "LazySetup.Token",
@@ -8311,15 +8314,15 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "2.0.0"
+          },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
             "version": "2.0.0",
             "autoReferenced": true
-          },
-          "Microsoft.AspNetCore.Authentication": {
-            "target": "Package",
-            "version": "2.0.0"
           },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
@@ -8329,7 +8332,7 @@
             "target": "Package",
             "version": "2.0.0"
           },
-          "Microsoft.Extensions.DependencyInjection": {
+          "Microsoft.AspNetCore.Authentication": {
             "target": "Package",
             "version": "2.0.0"
           }

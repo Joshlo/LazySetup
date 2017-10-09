@@ -3756,6 +3756,9 @@
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
       "projectUniqueName": "C:\\Kode\\LazySetup\\Elasticsearch\\LazySetup.Elasticsearch\\LazySetup.Elasticsearch.csproj",
       "projectName": "LazySetup.Elasticsearch",
@@ -3791,23 +3794,23 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "2.0.0"
+          },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
             "version": "2.0.0",
             "autoReferenced": true
           },
-          "Microsoft.Extensions.DependencyInjection": {
+          "Newtonsoft.Json": {
             "target": "Package",
-            "version": "2.0.0"
+            "version": "10.0.3"
           },
           "NEST": {
             "target": "Package",
             "version": "5.5.0"
-          },
-          "Newtonsoft.Json": {
-            "target": "Package",
-            "version": "10.0.3"
           }
         },
         "imports": [

@@ -5898,6 +5898,9 @@
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
       "projectUniqueName": "C:\\Kode\\LazySetup\\Redis\\LazySetup.Redis\\LazySetup.Redis.csproj",
       "projectName": "LazySetup.Redis",
@@ -5937,23 +5940,23 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "2.0.0"
+          },
+          "StackExchange.Redis": {
+            "target": "Package",
+            "version": "1.2.6"
+          },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
             "version": "2.0.0",
             "autoReferenced": true
           },
-          "Microsoft.Extensions.DependencyInjection": {
-            "target": "Package",
-            "version": "2.0.0"
-          },
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "10.0.3"
-          },
-          "StackExchange.Redis": {
-            "target": "Package",
-            "version": "1.2.6"
           }
         },
         "imports": [

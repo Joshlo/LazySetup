@@ -20,9 +20,9 @@ namespace LazySetup.Token
         private readonly TokenOptions _options;
         private readonly ITokenValidation _tokenValidator;
 
-        public TokenMiddleware(RequestDelegate next, IApplicationBuilder app, TokenOptions options)
+        public TokenMiddleware(RequestDelegate next, ITokenValidation tokenValidator, TokenOptions options)
         {
-            _tokenValidator = app.ApplicationServices.GetRequiredService<ITokenValidation>();
+            _tokenValidator = tokenValidator;
             _next = next;
             _options = options;
         }
@@ -45,7 +45,7 @@ namespace LazySetup.Token
                 
                 TokenClaims identity;
 
-                if (model.Grant_type.ToLower() == "refresh_token")
+                if (model.Grant_type.ToLower() == "refresh")
                 {
                     identity = await _tokenValidator.ValidateAsync(model.Refresh_token);
 
@@ -63,12 +63,12 @@ namespace LazySetup.Token
                     if (identity == null)
                     {
                         context.Response.StatusCode = 400;
-                        await context.Response.WriteAsync($"Invalid {_options.Identifier} or password");
+                        await context.Response.WriteAsync("Invalid identifier or password");
                         return;
                     }
 
                     model.Refresh_token = Guid.NewGuid().ToString().Replace("-", "");
-                    await _tokenValidator.StoreRefreshTokenAsync(model.Refresh_token);
+                    await _tokenValidator.StoreRefreshTokenAsync(model.Identifier, model.Refresh_token);
                 }
                 
                 var now = DateTime.UtcNow;

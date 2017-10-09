@@ -15,7 +15,8 @@ namespace LazySetup.Token
     {
         public static IApplicationBuilder UseTokenAuthorize(this IApplicationBuilder app, TokenOptions options)
         {
-            app.UseMiddleware<TokenMiddleware>(options);
+            var validator = app.ApplicationServices.GetRequiredService<ITokenValidation>();
+            app.UseMiddleware<TokenMiddleware>(validator, options);
             app.UseAuthentication();
             return app;
         }

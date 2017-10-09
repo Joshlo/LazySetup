@@ -3696,7 +3696,10 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
-    "version": "1.0.1",
+    "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
       "projectUniqueName": "C:\\Kode\\LazySetup\\HelpersAndExtensions\\LazySetup.HelpersAndExtensions\\LazySetup.HelpersAndExtensions.csproj",
       "projectName": "LazySetup.HelpersAndExtensions",

@@ -5327,6 +5327,9 @@
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
       "projectUniqueName": "C:\\Kode\\LazySetup\\Sql\\LazySetup.Sql\\LazySetup.Sql.csproj",
       "projectName": "LazySetup.Sql",
@@ -5362,12 +5365,6 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.NETCore.App": {
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "2.0.0",
-            "autoReferenced": true
-          },
           "Dapper": {
             "target": "Package",
             "version": "1.50.2"
@@ -5375,6 +5372,12 @@
           "Microsoft.Extensions.DependencyInjection": {
             "target": "Package",
             "version": "2.0.0"
+          },
+          "Microsoft.NETCore.App": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "2.0.0",
+            "autoReferenced": true
           }
         },
         "imports": [

@@ -9,6 +9,6 @@ namespace LazySetup.Token
     {
         Task<TokenClaims> ValidateAsync(string identifier, string password);
         Task<TokenClaims> ValidateAsync(string refreshToken);
-        Task StoreRefreshTokenAsync(string refreshToken);
+        Task StoreRefreshTokenAsync(string identifier, string refreshToken);
     }
 }
