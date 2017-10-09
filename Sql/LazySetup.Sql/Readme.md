@@ -1,6 +1,10 @@
 # Sql
 
-## Setup
+## Getting Started
+
+### Installation
+
+#### Configuration
 
 ```
 public void ConfigureServices(IServiceCollection services)
@@ -9,9 +13,9 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-## Use
+### Use
 
-Just inject *ISqlProvider* into the constructor and from there it's [Dapper](https://github.com/StackExchange/Dapper)
+Just inject **ISqlProvider** into the constructor and from there it's [Dapper](https://github.com/StackExchange/Dapper)
 
 ```
 private ISqlProvider _sqlProvider;
@@ -33,4 +37,4 @@ public Task<IEnumerable<T>> GetUser(int id)
 
 ## License
 
-[License](https://github.com/joshlo/license.md)
+[License](https://github.com/joshlo/LazySetup/blob/master/license.md)

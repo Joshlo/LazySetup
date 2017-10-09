@@ -4,9 +4,9 @@
 
 ### Prerequisites
 
-Before this middleware can work, and implementation for **ITokenHandler** must be made.
+Before this middleware can work, an implementation for **ITokenHandler** must be made.
 
-### Installing
+### Installation
 
 #### Configuration
 
@@ -39,7 +39,7 @@ When initializing **TokenOptions** there are some defaults that can be overwritt
 
 #### Claims
 
-When defining claims, just create a class where all the properies that are not null, will be converted to claims
+When defining claims, just create a class that inheriets from **TokenClaims**, where all the properies that are not null, will be converted to claims
 
 ```
 public class MyClaims : TokenClaims
@@ -61,9 +61,8 @@ Make a **POST** request to the path specified in the setup (default is /token), 
 }
 ```
 
-If the user logs in, then identifier/password should be set.
-
-If there already is a refresh token, then refresh_token should be sat and grant_type must be set to "refresh"
+* If the user logs in, then identifier/password should be set.
+* If there already is a refresh token, then refresh_token should be sat and grant_type must be set to "refresh"
 
 > When a user is logging out the refresh token should be invalidated where it's stored.
 
@@ -72,4 +71,4 @@ If there already is a refresh token, then refresh_token should be sat and grant_
 
 ## License
 
-[License](https://github.com/joshlo/license.md)
+[License](https://github.com/joshlo/LazySetup/blob/master/license.md)
