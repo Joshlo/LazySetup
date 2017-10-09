@@ -1,5 +1,7 @@
 ﻿# Tracking
 
+A small tracking middleware, to help you log Requests/Responses based on reponse statuscodes
+
 ## Getting Started
 
 ### Prerequisites

@@ -1,5 +1,7 @@
 # Token 
 
+An easy and quick way to setup JWT bearer token generation and validation.
+
 ## Getting Started
 
 ### Prerequisites
@@ -19,7 +21,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-Then we tell the app to use the middleware for generating tho tokens.
+Then we tell the app to use the middleware for generating the tokens.
 
 ```
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -54,10 +56,10 @@ Make a **POST** request to the path specified in the setup (default is /token), 
 
 ```
 {
-	"identifier": "",
-	"password": "",
-	"grant_type": "",
-	"refresh_token": ""
+	"identifier": string,
+	"password": string,
+	"grant_type": string,
+	"refresh_token": string
 }
 ```
 

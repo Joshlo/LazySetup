@@ -1,5 +1,7 @@
 ﻿# Elasticsearch
 
+A quick way to setup elasticsearch connection
+
 ## Getting Started
 
 ### Installation

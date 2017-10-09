@@ -2808,7 +2808,7 @@
       ]
     },
     "Microsoft.AspNetCore.Authentication/2.0.0": {
-      "sha512": "FIqO1utTvcPchQsEqYmYN9l7pyCutTpvZuuSHI7We2gKzG7wne90SVV/Su8MhcjhijtZZfG/XD2+OI5BHmH4Vw==",
+      "sha512": "QmgG+EkJg+lObB7XffZGrbj1E8JE74ZePyVsuywhXrvPDObrjUwyvsbkOQvdtjiULhkh+8fgfhBcDTTiMr56Eg==",
       "type": "package",
       "path": "microsoft.aspnetcore.authentication/2.0.0",
       "files": [

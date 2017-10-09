@@ -1,5 +1,7 @@
 # Sql
 
+An easy way to query your sql database
+
 ## Getting Started
 
 ### Installation

@@ -6,15 +6,10 @@ namespace LazySetup.Batch
 {
     public static class BatchSetup
     {
-        public static IServiceCollection AddBatchRequest(this IServiceCollection services)
-        {
-            return services;
-        }
-
-        public static IApplicationBuilder UseBatchRequest(this IApplicationBuilder app)
+        public static IApplicationBuilder UseBatchRequest(this IApplicationBuilder app, string path = "/batch")
         {
             var factory = app.ApplicationServices.GetRequiredService<IHttpContextFactory>();
-            app.UseMiddleware<BatchMiddleware>(factory, new BatchRequestOptions());
+            app.UseMiddleware<BatchMiddleware>(factory, path);
             return app;
         }
     }

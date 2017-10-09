@@ -18,18 +18,18 @@ namespace LazySetup.Batch
     {
         private readonly RequestDelegate _next;
         private readonly IHttpContextFactory _factory;
-        private readonly BatchRequestOptions _options;
+        private readonly string _path;
 
-        public BatchMiddleware(RequestDelegate next, IHttpContextFactory factory, BatchRequestOptions options)
+        public BatchMiddleware(RequestDelegate next, IHttpContextFactory factory, string path)
         {
             _next = next;
             _factory = factory;
-            _options = options;
+            _path = path;
         }
 
         public Task Invoke(HttpContext context)
         {
-            if (!context.Request.Path.Equals(_options.Path, StringComparison.Ordinal))
+            if (!context.Request.Path.Equals(_path, StringComparison.Ordinal))
             {
                 return _next(context);
             }
@@ -109,7 +109,7 @@ namespace LazySetup.Batch
             output.Set(input.Get<IHttpRequestIdentifierFeature>());
             output.Set(input.Get<IAuthenticationFeature>());
             output.Set(input.Get<IHttpAuthenticationFeature>());
-            output.Set<IItemsFeature>(new ItemsFeature()); // per request?
+            output.Set<IItemsFeature>(new ItemsFeature());
             return output;
         }
     }
