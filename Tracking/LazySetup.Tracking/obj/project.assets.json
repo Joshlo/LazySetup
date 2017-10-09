@@ -3760,9 +3760,6 @@
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
       "projectUniqueName": "C:\\Kode\\LazySetup\\Tracking\\LazySetup.Tracking\\LazySetup.Tracking.csproj",
       "projectName": "LazySetup.Tracking",
@@ -3802,10 +3799,6 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection": {
-            "target": "Package",
-            "version": "2.0.0"
-          },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
@@ -3813,6 +3806,10 @@
             "autoReferenced": true
           },
           "Microsoft.AspNetCore.Http.Abstractions": {
+            "target": "Package",
+            "version": "2.0.0"
+          },
+          "Microsoft.Extensions.DependencyInjection": {
             "target": "Package",
             "version": "2.0.0"
           }

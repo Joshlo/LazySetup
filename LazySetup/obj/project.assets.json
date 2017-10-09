@@ -9384,9 +9384,6 @@
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
       "projectUniqueName": "C:\\Kode\\LazySetup\\LazySetup\\LazySetup.All.csproj",
       "projectName": "LazySetup.All",
@@ -9411,14 +9408,8 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Kode\\LazySetup\\Token\\LazySetup.Token\\LazySetup.Token.csproj": {
-              "projectPath": "C:\\Kode\\LazySetup\\Token\\LazySetup.Token\\LazySetup.Token.csproj"
-            },
-            "C:\\Kode\\LazySetup\\Tracking\\LazySetup.Tracking\\LazySetup.Tracking.csproj": {
-              "projectPath": "C:\\Kode\\LazySetup\\Tracking\\LazySetup.Tracking\\LazySetup.Tracking.csproj"
-            },
-            "C:\\Kode\\LazySetup\\Sql\\LazySetup.Sql\\LazySetup.Sql.csproj": {
-              "projectPath": "C:\\Kode\\LazySetup\\Sql\\LazySetup.Sql\\LazySetup.Sql.csproj"
+            "C:\\Kode\\LazySetup\\Batch\\LazySetup.Batch\\LazySetup.Batch.csproj": {
+              "projectPath": "C:\\Kode\\LazySetup\\Batch\\LazySetup.Batch\\LazySetup.Batch.csproj"
             },
             "C:\\Kode\\LazySetup\\Elasticsearch\\LazySetup.Elasticsearch\\LazySetup.Elasticsearch.csproj": {
               "projectPath": "C:\\Kode\\LazySetup\\Elasticsearch\\LazySetup.Elasticsearch\\LazySetup.Elasticsearch.csproj"
@@ -9426,8 +9417,14 @@
             "C:\\Kode\\LazySetup\\Redis\\LazySetup.Redis\\LazySetup.Redis.csproj": {
               "projectPath": "C:\\Kode\\LazySetup\\Redis\\LazySetup.Redis\\LazySetup.Redis.csproj"
             },
-            "C:\\Kode\\LazySetup\\Batch\\LazySetup.Batch\\LazySetup.Batch.csproj": {
-              "projectPath": "C:\\Kode\\LazySetup\\Batch\\LazySetup.Batch\\LazySetup.Batch.csproj"
+            "C:\\Kode\\LazySetup\\Sql\\LazySetup.Sql\\LazySetup.Sql.csproj": {
+              "projectPath": "C:\\Kode\\LazySetup\\Sql\\LazySetup.Sql\\LazySetup.Sql.csproj"
+            },
+            "C:\\Kode\\LazySetup\\Token\\LazySetup.Token\\LazySetup.Token.csproj": {
+              "projectPath": "C:\\Kode\\LazySetup\\Token\\LazySetup.Token\\LazySetup.Token.csproj"
+            },
+            "C:\\Kode\\LazySetup\\Tracking\\LazySetup.Tracking\\LazySetup.Tracking.csproj": {
+              "projectPath": "C:\\Kode\\LazySetup\\Tracking\\LazySetup.Tracking\\LazySetup.Tracking.csproj"
             }
           }
         }
