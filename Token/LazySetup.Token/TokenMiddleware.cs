@@ -18,11 +18,11 @@ namespace LazySetup.Token
     {
         private readonly RequestDelegate _next;
         private readonly TokenOptions _options;
-        private readonly ITokenValidation _tokenValidator;
+        private readonly ITokenHandler _tokenHandler;
 
-        public TokenMiddleware(RequestDelegate next, ITokenValidation tokenValidator, TokenOptions options)
+        public TokenMiddleware(RequestDelegate next, ITokenHandler tokenHandler, TokenOptions options)
         {
-            _tokenValidator = tokenValidator;
+            _tokenHandler = tokenHandler;
             _next = next;
             _options = options;
         }
@@ -47,7 +47,7 @@ namespace LazySetup.Token
 
                 if (model.Grant_type.ToLower() == "refresh")
                 {
-                    identity = await _tokenValidator.ValidateAsync(model.Refresh_token);
+                    identity = await _tokenHandler.ValidateAsync(model.Refresh_token);
 
                     if (identity == null)
                     {
@@ -58,7 +58,7 @@ namespace LazySetup.Token
                 }
                 else
                 {
-                    identity = await _tokenValidator.ValidateAsync(model.Identifier, model.Password);
+                    identity = await _tokenHandler.ValidateAsync(model.Identifier, model.Password);
 
                     if (identity == null)
                     {
@@ -68,7 +68,7 @@ namespace LazySetup.Token
                     }
 
                     model.Refresh_token = Guid.NewGuid().ToString().Replace("-", "");
-                    await _tokenValidator.StoreRefreshTokenAsync(model.Identifier, model.Refresh_token);
+                    await _tokenHandler.StoreRefreshTokenAsync(model.Identifier, model.Refresh_token);
                 }
                 
                 var now = DateTime.UtcNow;

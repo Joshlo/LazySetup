@@ -8,12 +8,14 @@ namespace LazySetup.Tracking
     public class TrackingMiddleware
     {
         private readonly RequestDelegate _next;
-        private readonly TrackingOptions _options;
+        private readonly ITrackingHandler _trackingHandler;
+        private readonly TrackingTypes _type;
 
-        public TrackingMiddleware(RequestDelegate next, TrackingOptions options)
+        public TrackingMiddleware(RequestDelegate next, ITrackingHandler trackingHandler, TrackingTypes type)
         {
             _next = next;
-            _options = options;
+            _trackingHandler = trackingHandler;
+            _type = type;
         }
 
         public async Task Invoke(HttpContext context)
@@ -29,16 +31,16 @@ namespace LazySetup.Tracking
                 ExecutionTime = timer.Elapsed
             };
 
-            if (_options.TrackingType == TrackingTypes.All)
+            if (_type == TrackingTypes.All)
                 model.Response = context.Response;
 
-            if (_options.TrackingType == TrackingTypes.Success && context.Response.IsSuccessStatusCode())
+            if (_type == TrackingTypes.Success && context.Response.IsSuccessStatusCode())
                 model.Response = context.Response;
 
-            if (_options.TrackingType == TrackingTypes.Errors && !context.Response.IsSuccessStatusCode())
+            if (_type == TrackingTypes.Errors && !context.Response.IsSuccessStatusCode())
                 model.Response = context.Response;
 
-            _options.Execute(model);
+            await _trackingHandler.SaveTracking(model);
         }
     }
 }
