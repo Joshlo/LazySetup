@@ -6,7 +6,7 @@ namespace LazySetup.Redis
     {
         public static void AddRedis(this IServiceCollection services, string connectionString)
         {
-            services.AddSingleton<IRedis>(provider => new Redis(connectionString));
+            services.AddSingleton<IRedisClient>(provider => new RedisClient(connectionString));
         }
     }
 }

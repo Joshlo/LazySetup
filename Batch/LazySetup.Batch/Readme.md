@@ -34,3 +34,17 @@ Path defaults to "/batch"
 ```
 
 #### Response
+
+The response will contain objects in the same order as the request.
+
+```
+[
+	{
+		"statusCode": integer,
+		"headers": [
+			string: string
+		],
+		"body": {}
+	}
+]
+```

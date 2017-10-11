@@ -12,33 +12,37 @@ namespace LazySetup.Elasticsearch
         /// <summary>
         /// Setup connection to single node
         /// </summary>
-        public static void AddElasticsearch(this IServiceCollection services, string url)
+        public static void AddElasticsearch(this IServiceCollection services, string url, int maxDepth = 3)
         {
             services.AddSingleton<IElasticClient>(provider => new ElasticClient(new Uri(url)));
+            services.AddTransient<IElasticExtensions>(provider => new ElasticExtensions(provider.GetRequiredService<IElasticClient>(), maxDepth));
         }
 
         /// <summary>
         /// Setup connection to single node
         /// </summary>
-        public static void AddElasticsearch(this IServiceCollection services, string url, string username, string password)
+        public static void AddElasticsearch(this IServiceCollection services, string url, string username, string password, int maxDepth = 3)
         {
             services.AddSingleton<IElasticClient>(provider => new ElasticClient(new ConnectionSettings(new SingleNodeConnectionPool(new Uri(url))).BasicAuthentication(username, password)));
+            services.AddTransient<IElasticExtensions>(provider => new ElasticExtensions(provider.GetRequiredService<IElasticClient>(), maxDepth));
         }
 
         /// <summary>
         /// Setup connection to multiple nodes
         /// </summary>
-        public static void AddElasticsearch(this IServiceCollection services, IEnumerable<string> urls)
+        public static void AddElasticsearch(this IServiceCollection services, IEnumerable<string> urls, int maxDepth = 3)
         {
             services.AddSingleton<IElasticClient>(provider => new ElasticClient(new ConnectionSettings(new StaticConnectionPool(urls.Select(url => new Uri(url))))));
+            services.AddTransient<IElasticExtensions>(provider => new ElasticExtensions(provider.GetRequiredService<IElasticClient>(), maxDepth));
         }
 
         /// <summary>
         /// Setup connection to multiple nodes
         /// </summary>
-        public static void AddElasticsearch(this IServiceCollection services, IEnumerable<string> urls, string username, string password)
+        public static void AddElasticsearch(this IServiceCollection services, IEnumerable<string> urls, string username, string password, int maxDepth = 3)
         {
             services.AddSingleton<IElasticClient>(provider => new ElasticClient(new ConnectionSettings(new StaticConnectionPool(urls.Select(url => new Uri(url)))).BasicAuthentication(username, password)));
+            services.AddTransient<IElasticExtensions>(provider => new ElasticExtensions(provider.GetRequiredService<IElasticClient>(), maxDepth));
         }
     }
 }
