@@ -15,7 +15,7 @@ namespace LazySetup.Elasticsearch
         public static void AddElasticsearch(this IServiceCollection services, string url, int maxDepth = 3)
         {
             services.AddSingleton<IElasticClient>(provider => new ElasticClient(new Uri(url)));
-            services.AddTransient<IElasticExtensions>(provider => new ElasticExtensions(provider.GetRequiredService<IElasticClient>(), maxDepth));
+            services.AddTransient<IElasticLinkHandler>(provider => new ElasticLinkHandler(provider.GetRequiredService<IElasticClient>(), maxDepth));
         }
 
         /// <summary>
@@ -24,7 +24,7 @@ namespace LazySetup.Elasticsearch
         public static void AddElasticsearch(this IServiceCollection services, string url, string username, string password, int maxDepth = 3)
         {
             services.AddSingleton<IElasticClient>(provider => new ElasticClient(new ConnectionSettings(new SingleNodeConnectionPool(new Uri(url))).BasicAuthentication(username, password)));
-            services.AddTransient<IElasticExtensions>(provider => new ElasticExtensions(provider.GetRequiredService<IElasticClient>(), maxDepth));
+            services.AddTransient<IElasticLinkHandler>(provider => new ElasticLinkHandler(provider.GetRequiredService<IElasticClient>(), maxDepth));
         }
 
         /// <summary>
@@ -33,7 +33,7 @@ namespace LazySetup.Elasticsearch
         public static void AddElasticsearch(this IServiceCollection services, IEnumerable<string> urls, int maxDepth = 3)
         {
             services.AddSingleton<IElasticClient>(provider => new ElasticClient(new ConnectionSettings(new StaticConnectionPool(urls.Select(url => new Uri(url))))));
-            services.AddTransient<IElasticExtensions>(provider => new ElasticExtensions(provider.GetRequiredService<IElasticClient>(), maxDepth));
+            services.AddTransient<IElasticLinkHandler>(provider => new ElasticLinkHandler(provider.GetRequiredService<IElasticClient>(), maxDepth));
         }
 
         /// <summary>
@@ -42,7 +42,7 @@ namespace LazySetup.Elasticsearch
         public static void AddElasticsearch(this IServiceCollection services, IEnumerable<string> urls, string username, string password, int maxDepth = 3)
         {
             services.AddSingleton<IElasticClient>(provider => new ElasticClient(new ConnectionSettings(new StaticConnectionPool(urls.Select(url => new Uri(url)))).BasicAuthentication(username, password)));
-            services.AddTransient<IElasticExtensions>(provider => new ElasticExtensions(provider.GetRequiredService<IElasticClient>(), maxDepth));
+            services.AddTransient<IElasticLinkHandler>(provider => new ElasticLinkHandler(provider.GetRequiredService<IElasticClient>(), maxDepth));
         }
     }
 }

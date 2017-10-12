@@ -11,7 +11,7 @@ namespace LazySetup.Elasticsearch
         public static SearchRequest Create<T>(ElasticLink elasticLink, T doc)
         {
             Type itemType = doc.GetType();
-            PropertyInfo prop = itemType.GetProperty(elasticLink.Value);
+            PropertyInfo prop = itemType.GetProperty(elasticLink.ValueField);
 
             return new SearchRequest(elasticLink.LinkedIndex)
             {
