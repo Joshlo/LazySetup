@@ -29,7 +29,7 @@ MaxDepth defaults to 3, but can be overwritten here in the setup and again when 
 
 #### NEST
 
-If you want to use the NEST module then just inject **IElasticClient** into the constructor and from there it's [NEST](https://github.com/elastic/elasticsearch-net)
+If you want to use the NEST module then just inject **IElasticClient** and from there it's [NEST](https://github.com/elastic/elasticsearch-net)
 
 ```
 private IElasticClient _elasticClient;
@@ -43,14 +43,14 @@ public UserRepo(IElasticClient elasticClient)
 
 In our example we have two indexes.
 
-**users** index
+**users**
 {
 	"id": int
 	...
 	...
 }
 
-**addresses** index
+**addresses**
 {
 	"id": int,
 	"userId": int
@@ -58,7 +58,7 @@ In our example we have two indexes.
 	...
 }
 
-When we want to link a property, we decorate it with an attribute called *ElasticLink*
+When we want to link a property, we decorate it with an attribute called **ElasticLink**
 
 ElasticLink takes following
 * **targetIndex** - string - Name on the index the property should link to
@@ -82,3 +82,25 @@ public class Address
 
 }
 ```
+
+When we want to use it, we inject **IElasticLinkHandler**.
+```
+public class UserSearch
+{
+	private IElasticLinkHandler _linkHandler;
+	public UserSearch(IElasticLinkHandler linkHandler)
+	{
+		_linkHandler = linkHandler;
+	}
+
+	public async Task Method(CancellationToken cancellationToken)
+	{
+		var result = await _linkHandler.LinkedSearchAsync<User>(s => s.Index("users").MatchAll(), cancellationToken, 3);
+	}
+}
+```
+
+The response contains three properties
+* **Documents** - IEnumerable<T> - The result from the query
+* **TotalDocuments** - long - Total documents found matching the query. This does not count the linked documents
+* **QueryTime** - TimeSpan - When the LinkedSearchAsync<> is called, a timer starts to give the total time to retrieve the documents and all the linked documents.

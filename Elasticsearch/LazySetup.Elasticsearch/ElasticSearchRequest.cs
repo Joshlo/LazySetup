@@ -13,7 +13,7 @@ namespace LazySetup.Elasticsearch
             Type itemType = doc.GetType();
             PropertyInfo prop = itemType.GetProperty(elasticLink.ValueField);
 
-            return new SearchRequest(elasticLink.LinkedIndex)
+            return new SearchRequest(elasticLink.LinkedIndex, elasticLink.LinkedType)
             {
                 Query = new MatchQuery
                 {
