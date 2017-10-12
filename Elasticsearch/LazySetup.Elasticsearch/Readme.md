@@ -104,3 +104,10 @@ The response contains three properties
 * **Documents** - IEnumerable<T> - The result from the query
 * **TotalDocuments** - long - Total documents found matching the query. This does not count the linked documents
 * **QueryTime** - TimeSpan - When the LinkedSearchAsync<> is called, a timer starts to give the total time to retrieve the documents and all the linked documents.
+
+## Authors
+* **Kenneth G. Pedersen** [Joshlo](https://github.com/joshlo)
+
+## License
+
+[License](https://github.com/joshlo/LazySetup/blob/master/license.md)

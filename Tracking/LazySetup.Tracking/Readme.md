@@ -26,7 +26,6 @@ Following TrackingTypes exist:
 * Success - Status code 200 - 299
 * Errors - Anything that isn't in 200 - 299 status code
 
-
 ## Authors
 * **Kenneth G. Pedersen** [Joshlo](https://github.com/joshlo)
 
