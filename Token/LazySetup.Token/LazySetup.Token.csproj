@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Authors>Kenneth G. Pedersen</Authors>
+    <Company />
+    <Description>Enable token generating and validating as a middleware</Description>
+    <PackageProjectUrl>https://github.com/Joshlo/LazySetup/tree/master/Token/LazySetup.Token</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Joshlo/LazySetup/tree/master/Token/LazySetup.Token</RepositoryUrl>
+    <PackageTags>Token Bearer Jwt Authorize</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

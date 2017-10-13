@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Authors>Kenneth G. Pedersen</Authors>
+    <Company />
+    <Description>A small middleware that help track time on calls and log requests/reponses</Description>
+    <PackageProjectUrl>https://github.com/Joshlo/LazySetup/tree/master/Tracking/LazySetup.Tracking</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Joshlo/LazySetup/tree/master/Tracking/LazySetup.Tracking</RepositoryUrl>
+    <PackageTags>Tracking</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

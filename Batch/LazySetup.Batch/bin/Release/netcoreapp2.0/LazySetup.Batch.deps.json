@@ -6,9 +6,9 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "LazySetup.Batch/1.0.1": {
+      "LazySetup.Batch/1.0.0": {
         "dependencies": {
-          "LazySetup.HelpersAndExtensions": "1.0.1",
+          "LazySetup.HelpersAndExtensions": "1.0.0",
           "Microsoft.AspNetCore.Http.Abstractions": "2.0.0",
           "Microsoft.AspNetCore.Mvc": "2.0.0",
           "Microsoft.Extensions.DependencyInjection": "2.0.0",
@@ -1604,7 +1604,7 @@
           "System.Xml.XPath": "4.3.0"
         }
       },
-      "LazySetup.HelpersAndExtensions/1.0.1": {
+      "LazySetup.HelpersAndExtensions/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Abstractions": "2.0.0",
           "Newtonsoft.Json": "10.0.3"
@@ -1616,7 +1616,7 @@
     }
   },
   "libraries": {
-    "LazySetup.Batch/1.0.1": {
+    "LazySetup.Batch/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -2713,7 +2713,7 @@
       "path": "system.xml.xpath.xdocument/4.3.0",
       "hashPath": "system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
     },
-    "LazySetup.HelpersAndExtensions/1.0.1": {
+    "LazySetup.HelpersAndExtensions/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

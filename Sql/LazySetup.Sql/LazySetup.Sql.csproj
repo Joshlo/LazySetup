@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Authors>Kenneth G. Pedersen</Authors>
+    <Company />
+    <Description>A quick way to setup Dapper with a basic need implementation</Description>
+    <PackageProjectUrl>https://github.com/Joshlo/LazySetup/tree/master/Sql/LazySetup.Sql</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Joshlo/LazySetup/tree/master/Sql/LazySetup.Sql</RepositoryUrl>
+    <PackageTags>Sql Dapper</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

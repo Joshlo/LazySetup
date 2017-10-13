@@ -6,3 +6,4 @@ C:\Kode\LazySetup\HelpersAndExtensions\LazySetup.HelpersAndExtensions\obj\Releas
 C:\Kode\LazySetup\HelpersAndExtensions\LazySetup.HelpersAndExtensions\obj\Release\netcoreapp2.0\LazySetup.HelpersAndExtensions.AssemblyInfo.cs
 C:\Kode\LazySetup\HelpersAndExtensions\LazySetup.HelpersAndExtensions\obj\Release\netcoreapp2.0\LazySetup.HelpersAndExtensions.dll
 C:\Kode\LazySetup\HelpersAndExtensions\LazySetup.HelpersAndExtensions\obj\Release\netcoreapp2.0\LazySetup.HelpersAndExtensions.pdb
+C:\Kode\LazySetup\HelpersAndExtensions\LazySetup.HelpersAndExtensions\obj\Release\netcoreapp2.0\LazySetup.HelpersAndExtensions.csprojResolveAssemblyReference.cache

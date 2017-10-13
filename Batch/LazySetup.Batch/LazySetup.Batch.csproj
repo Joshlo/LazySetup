@@ -2,12 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-    <Authors>Joshlo</Authors>
+    <Authors>Kenneth G. Pedersen</Authors>
     <Company />
-    <Description />
+    <Description>Enables batching in .net core 2.0 as a middleware</Description>
     <PackageLicenseUrl></PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/joshlo/lazysetup/batch</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/joshlo/lazysetup/batch</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Joshlo/LazySetup/tree/master/Batch/LazySetup.Batch</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Joshlo/LazySetup/tree/master/Batch/LazySetup.Batch</RepositoryUrl>
+    <PackageTags>Batch</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

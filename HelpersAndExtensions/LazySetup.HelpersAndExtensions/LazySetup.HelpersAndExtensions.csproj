@@ -2,6 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Authors>Kenneth G. Pedersen</Authors>
+    <Company />
+    <Description>Helpers and extensions</Description>
+    <PackageProjectUrl>https://github.com/Joshlo/LazySetup/tree/master/HelpersAndExtensions/LazySetup.HelpersAndExtensions</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Joshlo/LazySetup/tree/master/HelpersAndExtensions/LazySetup.HelpersAndExtensions</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

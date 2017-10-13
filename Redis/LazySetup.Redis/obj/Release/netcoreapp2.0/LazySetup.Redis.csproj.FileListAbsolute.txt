@@ -1,0 +1,11 @@
+C:\Kode\LazySetup\Redis\LazySetup.Redis\bin\Release\netcoreapp2.0\LazySetup.Redis.deps.json
+C:\Kode\LazySetup\Redis\LazySetup.Redis\bin\Release\netcoreapp2.0\LazySetup.Redis.dll
+C:\Kode\LazySetup\Redis\LazySetup.Redis\bin\Release\netcoreapp2.0\LazySetup.Redis.pdb
+C:\Kode\LazySetup\Redis\LazySetup.Redis\bin\Release\netcoreapp2.0\LazySetup.HelpersAndExtensions.dll
+C:\Kode\LazySetup\Redis\LazySetup.Redis\bin\Release\netcoreapp2.0\LazySetup.HelpersAndExtensions.pdb
+C:\Kode\LazySetup\Redis\LazySetup.Redis\obj\Release\netcoreapp2.0\LazySetup.Redis.csprojResolveAssemblyReference.cache
+C:\Kode\LazySetup\Redis\LazySetup.Redis\obj\Release\netcoreapp2.0\LazySetup.Redis.csproj.CoreCompileInputs.cache
+C:\Kode\LazySetup\Redis\LazySetup.Redis\obj\Release\netcoreapp2.0\LazySetup.Redis.AssemblyInfoInputs.cache
+C:\Kode\LazySetup\Redis\LazySetup.Redis\obj\Release\netcoreapp2.0\LazySetup.Redis.AssemblyInfo.cs
+C:\Kode\LazySetup\Redis\LazySetup.Redis\obj\Release\netcoreapp2.0\LazySetup.Redis.dll
+C:\Kode\LazySetup\Redis\LazySetup.Redis\obj\Release\netcoreapp2.0\LazySetup.Redis.pdb

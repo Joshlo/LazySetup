@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Authors>Kenneth G. Pedersen</Authors>
+    <Company />
+    <Description>A small package that makes Elasticsearch setup easier and also adds linking indexes possible</Description>
+    <PackageProjectUrl>https://github.com/Joshlo/LazySetup/tree/master/Elasticsearch/LazySetup.Elasticsearch</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Joshlo/LazySetup/tree/master/Elasticsearch/LazySetup.Elasticsearch</RepositoryUrl>
+    <PackageTags>Elasticsearch</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

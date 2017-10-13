@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.0": {
-      "LazySetup.HelpersAndExtensions/1.0.1": {
+      "LazySetup.HelpersAndExtensions/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Abstractions": "2.0.0",
           "Newtonsoft.Json": "10.0.3"
@@ -426,7 +426,7 @@
     }
   },
   "libraries": {
-    "LazySetup.HelpersAndExtensions/1.0.1": {
+    "LazySetup.HelpersAndExtensions/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

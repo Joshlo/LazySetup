@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>LazySetup.Tracking</id>
+    <version>1.0.0</version>
+    <authors>Kenneth G. Pedersen</authors>
+    <owners>Kenneth G. Pedersen</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/Joshlo/LazySetup/tree/master/Tracking/LazySetup.Tracking</projectUrl>
+    <description>A small middleware that help track time on calls and log requests/reponses</description>
+    <tags>Tracking</tags>
+    <repository url="https://github.com/Joshlo/LazySetup/tree/master/Tracking/LazySetup.Tracking" />
+    <dependencies>
+      <group targetFramework=".NETCoreApp2.0">
+        <dependency id="LazySetup.HelpersAndExtensions" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Http.Abstractions" version="2.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Kode\LazySetup\Tracking\LazySetup.Tracking\bin\Release\netcoreapp2.0\LazySetup.Tracking.dll" target="lib\netcoreapp2.0\LazySetup.Tracking.dll" />
+  </files>
+</package>

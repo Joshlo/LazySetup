@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Authors>Kenneth G. Pedersen</Authors>
+    <Company />
+    <Description>A quick setup for Redis</Description>
+    <PackageProjectUrl>https://github.com/Joshlo/LazySetup/tree/master/Redis/LazySetup.Redis</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Joshlo/LazySetup/tree/master/Redis/LazySetup.Redis</RepositoryUrl>
+    <PackageTags>Redis</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
