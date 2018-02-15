@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Threading.Tasks;
 using Dapper;
 
@@ -20,6 +21,8 @@ namespace LazySetup.Sql
         Task<TResult> FirstOrDefaultAsync<TResult>(string sql, object parameters = null);
         Task<TResult> QueryMultipleAsync<TResult>(string sql, Func<SqlMapper.GridReader, TResult> func, object parameters = null);
 
+        Task<int> ExecuteAsync(string sql, object parameters = null);
+
         IEnumerable<TResult> Query<TResult>(string sql, object parameters = null);
         IEnumerable<TResult> Query<TFirst, TSecond, TResult>(string sql, Func<TFirst, TSecond, TResult> func,
             string splitOn, object parameters = null);
@@ -31,5 +34,7 @@ namespace LazySetup.Sql
 
         TResult QueryMultiple<TResult>(string sql, Func<SqlMapper.GridReader, TResult> func,
             object parameters = null);
+
+        int Execute(string sql, object parameters = null);
     }
 }

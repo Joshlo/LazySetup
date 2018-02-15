@@ -75,16 +75,16 @@ namespace LazySetup.Batch
                         features.Set<IHttpRequestLifetimeFeature>(requestLifetimeFeature);
 
                         var innerContext = _factory.Create(features);
-
+                        
                         await _next(innerContext);
                         innerContext.Response.Body.ResetPosition();
                         var responseBody = await streamHelper.StreamToJson(innerContext.Response.Body);
-
+                        
                         response.Add(new ResponseModel
                         {
                             StatusCode = innerContext.Response.StatusCode,
                             Headers = innerContext.Response.Headers.ToDictionary(x => x.Key, x => x.Value.ToString()),
-                            Body = JsonConvert.DeserializeObject(responseBody)
+                            Body = innerContext.Response.Headers.Any(x => x.Value.ToString().ToLower().Contains("application/json")) ? JsonConvert.DeserializeObject(responseBody) : responseBody
                         });
                     }
                 }
@@ -101,6 +101,11 @@ namespace LazySetup.Batch
             context.Response.StatusCode = 400;
             await context.Response.WriteAsync("This endpoint only accepts POST");
         }
+
+        //private object GetObject(string body)
+        //{
+        //    if()
+        //}
 
         private FeatureCollection CreateDefaultFeatures(IFeatureCollection input)
         {

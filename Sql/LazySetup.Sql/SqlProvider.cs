@@ -69,6 +69,15 @@ namespace LazySetup.Sql
             }
         }
 
+        public async Task<int> ExecuteAsync(string sql, object parameters = null)
+        {
+            using (var connection = new SqlConnection(ConnectionString))
+            {
+                await connection.OpenAsync();
+                return await connection.ExecuteAsync(sql, parameters);
+            }
+        }
+
         public IEnumerable<TResult> Query<TResult>(string sql, object parameters = null)
         {
             using (var connection = new SqlConnection(ConnectionString))
@@ -117,6 +126,15 @@ namespace LazySetup.Sql
             {
                 connection.Open();
                 return func(connection.QueryMultiple(sql, parameters));
+            }
+        }
+
+        public int Execute(string sql, object parameters = null)
+        {
+            using (var connection = new SqlConnection(ConnectionString))
+            {
+                connection.Open();
+                return connection.Execute(sql, parameters);
             }
         }
     }

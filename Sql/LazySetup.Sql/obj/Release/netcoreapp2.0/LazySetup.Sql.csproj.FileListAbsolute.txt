@@ -1,9 +1,0 @@
-C:\Kode\LazySetup\Sql\LazySetup.Sql\bin\Release\netcoreapp2.0\LazySetup.Sql.deps.json
-C:\Kode\LazySetup\Sql\LazySetup.Sql\bin\Release\netcoreapp2.0\LazySetup.Sql.dll
-C:\Kode\LazySetup\Sql\LazySetup.Sql\bin\Release\netcoreapp2.0\LazySetup.Sql.pdb
-C:\Kode\LazySetup\Sql\LazySetup.Sql\obj\Release\netcoreapp2.0\LazySetup.Sql.csprojResolveAssemblyReference.cache
-C:\Kode\LazySetup\Sql\LazySetup.Sql\obj\Release\netcoreapp2.0\LazySetup.Sql.csproj.CoreCompileInputs.cache
-C:\Kode\LazySetup\Sql\LazySetup.Sql\obj\Release\netcoreapp2.0\LazySetup.Sql.AssemblyInfoInputs.cache
-C:\Kode\LazySetup\Sql\LazySetup.Sql\obj\Release\netcoreapp2.0\LazySetup.Sql.AssemblyInfo.cs
-C:\Kode\LazySetup\Sql\LazySetup.Sql\obj\Release\netcoreapp2.0\LazySetup.Sql.dll
-C:\Kode\LazySetup\Sql\LazySetup.Sql\obj\Release\netcoreapp2.0\LazySetup.Sql.pdb

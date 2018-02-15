@@ -1,9 +1,0 @@
-C:\Kode\LazySetup\HelpersAndExtensions\LazySetup.HelpersAndExtensions\bin\Release\netcoreapp2.0\LazySetup.HelpersAndExtensions.deps.json
-C:\Kode\LazySetup\HelpersAndExtensions\LazySetup.HelpersAndExtensions\bin\Release\netcoreapp2.0\LazySetup.HelpersAndExtensions.dll
-C:\Kode\LazySetup\HelpersAndExtensions\LazySetup.HelpersAndExtensions\bin\Release\netcoreapp2.0\LazySetup.HelpersAndExtensions.pdb
-C:\Kode\LazySetup\HelpersAndExtensions\LazySetup.HelpersAndExtensions\obj\Release\netcoreapp2.0\LazySetup.HelpersAndExtensions.csproj.CoreCompileInputs.cache
-C:\Kode\LazySetup\HelpersAndExtensions\LazySetup.HelpersAndExtensions\obj\Release\netcoreapp2.0\LazySetup.HelpersAndExtensions.AssemblyInfoInputs.cache
-C:\Kode\LazySetup\HelpersAndExtensions\LazySetup.HelpersAndExtensions\obj\Release\netcoreapp2.0\LazySetup.HelpersAndExtensions.AssemblyInfo.cs
-C:\Kode\LazySetup\HelpersAndExtensions\LazySetup.HelpersAndExtensions\obj\Release\netcoreapp2.0\LazySetup.HelpersAndExtensions.dll
-C:\Kode\LazySetup\HelpersAndExtensions\LazySetup.HelpersAndExtensions\obj\Release\netcoreapp2.0\LazySetup.HelpersAndExtensions.pdb
-C:\Kode\LazySetup\HelpersAndExtensions\LazySetup.HelpersAndExtensions\obj\Release\netcoreapp2.0\LazySetup.HelpersAndExtensions.csprojResolveAssemblyReference.cache

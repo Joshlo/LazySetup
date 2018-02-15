@@ -1,2 +1,3 @@
 *.ncrunchsolution.*
-/bin/*
+*/bin/*
+*/obj/*

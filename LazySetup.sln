@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazySetup.All", "LazySetup\LazySetup.All.csproj", "{78BCFEE5-EE18-42BB-9D0B-7DADE2FA57B5}"
 EndProject
@@ -38,6 +38,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		License.md = License.md
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Https", "Https", "{95F85747-DF27-4D1A-B9FD-639EBDED67EC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazySetup.RequireHttps", "LazySetup.RequireHttps\LazySetup.RequireHttps.csproj", "{30C47DFC-B883-4496-ADCD-5D227BA932FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +81,10 @@ Global
 		{77F71F00-D7F7-4472-8808-9AD8A20E14EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77F71F00-D7F7-4472-8808-9AD8A20E14EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77F71F00-D7F7-4472-8808-9AD8A20E14EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30C47DFC-B883-4496-ADCD-5D227BA932FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30C47DFC-B883-4496-ADCD-5D227BA932FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30C47DFC-B883-4496-ADCD-5D227BA932FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30C47DFC-B883-4496-ADCD-5D227BA932FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,6 +97,7 @@ Global
 		{5FED6A77-12CE-48DD-8128-D7A22DCE6308} = {A904B2D0-4774-4B9A-A635-66F1FBB6B6B3}
 		{3E393647-259E-4D98-86AC-C9A53606D1DE} = {3A484D44-D8B5-499B-9ACB-057C0981BF3D}
 		{77F71F00-D7F7-4472-8808-9AD8A20E14EB} = {1E61FB13-A4F0-4BD7-9A06-B3C7365E521B}
+		{30C47DFC-B883-4496-ADCD-5D227BA932FE} = {95F85747-DF27-4D1A-B9FD-639EBDED67EC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B1FF0618-FF29-4D70-9CF7-C5B27E53BB12}
