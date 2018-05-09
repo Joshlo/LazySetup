@@ -5,6 +5,9 @@ using System.IO;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Internal;
@@ -34,6 +37,19 @@ namespace LazySetup.Token
                 await _next(context);
                 return;
             }
+
+            if (context.Request.Method.Equals("POST") && context.Request.HasFormContentType)
+            {
+                var model = new TokenRequest
+                {
+                    Identifier = context.Request.Form["identifier"],
+                    Password = context.Request.Form["password"]
+                };
+
+                await Generate(context, model);
+                return;
+            }
+
             if (context.Request.Method.Equals("POST"))
             {
                 context.Request.EnableRewind();
@@ -42,46 +58,62 @@ namespace LazySetup.Token
                 var json = await bodyStream.ReadToEndAsync();
 
                 var model = JsonConvert.DeserializeObject<TokenRequest>(json);
-                
-                TokenClaims identity;
 
-                if (model.Grant_type.ToLower() == "refresh")
+                await Generate(context, model);
+                return;
+            }
+
+            context.Response.StatusCode = 400;
+            await context.Response.WriteAsync("Bad request.");
+        }
+
+        private async Task Generate(HttpContext context, TokenRequest model)
+        {
+            TokenClaims identity;
+
+            if (model.Grant_type?.ToLower() == "refresh")
+            {
+                identity = await _tokenHandler.ValidateAsync(model.Refresh_token);
+
+                if (identity == null)
                 {
-                    identity = await _tokenHandler.ValidateAsync(model.Refresh_token);
-
-                    if (identity == null)
-                    {
-                        context.Response.StatusCode = 400;
-                        await context.Response.WriteAsync($"Invalid refresh_token: {model.Refresh_token}");
-                        return;
-                    }
+                    context.Response.StatusCode = 400;
+                    await context.Response.WriteAsync($"Invalid refresh_token: {model.Refresh_token}");
+                    return;
                 }
-                else
+            }
+            else
+            {
+                identity = await _tokenHandler.ValidateAsync(model.Identifier, model.Password);
+
+                if (identity == null)
                 {
-                    identity = await _tokenHandler.ValidateAsync(model.Identifier, model.Password);
-
-                    if (identity == null)
-                    {
-                        context.Response.StatusCode = 400;
-                        await context.Response.WriteAsync("Invalid identifier or password");
-                        return;
-                    }
-
-                    model.Refresh_token = Guid.NewGuid().ToString().Replace("-", "");
-                    await _tokenHandler.StoreRefreshTokenAsync(model.Identifier, model.Refresh_token);
-                }
-                
-                var now = DateTime.UtcNow;
-                var claims = new List<Claim>();
-
-                var type = identity.GetType();
-
-                foreach (var prop in type.GetProperties())
-                {
-                    if (prop.GetValue(identity) != null)
-                        claims.Add(new Claim(prop.Name, prop.GetValue(identity).ToString()));
+                    context.Response.StatusCode = 400;
+                    await context.Response.WriteAsync("Invalid identifier or password");
+                    return;
                 }
 
+                model.Refresh_token = Guid.NewGuid().ToString().Replace("-", "");
+                await _tokenHandler.StoreRefreshTokenAsync(model.Identifier, model.Refresh_token);
+            }
+
+            var now = DateTime.UtcNow;
+            var claims = new List<Claim>();
+
+            var type = identity.GetType();
+
+            foreach (var prop in type.GetProperties())
+            {
+                if (prop.GetValue(identity) != null)
+                    claims.Add(new Claim(prop.Name, prop.GetValue(identity).ToString()));
+            }
+
+            if (_options.UseCookie)
+            {
+                await context.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(new ClaimsIdentity(claims)));
+            }
+            else
+            {
                 var jwt = new JwtSecurityToken(
                     issuer: _options.Issuer,
                     audience: _options.Audience,
@@ -89,7 +121,7 @@ namespace LazySetup.Token
                     notBefore: now,
                     expires: now.Add(_options.Expiration),
                     signingCredentials: _options.SigningCredentials
-                    );
+                );
 
                 var encodedJwt = new JwtSecurityTokenHandler().WriteToken(jwt);
 
@@ -103,11 +135,7 @@ namespace LazySetup.Token
                 context.Response.ContentType = "application/json";
                 await context.Response.WriteAsync(JsonConvert.SerializeObject(response,
                     new JsonSerializerSettings { Formatting = Formatting.Indented }));
-                return;
             }
-
-            context.Response.StatusCode = 400;
-            await context.Response.WriteAsync("Bad request.");
         }
     }
 }

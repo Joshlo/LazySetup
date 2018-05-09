@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazySetup.All", "LazySetup\LazySetup.All.csproj", "{78BCFEE5-EE18-42BB-9D0B-7DADE2FA57B5}"
 EndProject
@@ -42,6 +42,16 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Https", "Https", "{95F85747-DF27-4D1A-B9FD-639EBDED67EC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazySetup.RequireHttps", "LazySetup.RequireHttps\LazySetup.RequireHttps.csproj", "{30C47DFC-B883-4496-ADCD-5D227BA932FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ip", "Ip", "{FD2A0876-FF38-459F-9C8F-D0894D5D020E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazySetup.Ip", "LazySetup.Ip\LazySetup.Ip.csproj", "{C9DA5D1B-B7AB-4432-9B01-6AD66BE64690}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazySetup.Web", "LazySetup.Web\LazySetup.Web.csproj", "{596A7A17-381C-45C4-AC12-CF7917AE4ECB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Charts", "Charts", "{288C9C01-5C63-4D1F-B06F-1CAEC71F5306}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LazySetup.Charts", "LazySetup.Charts\LazySetup.Charts.csproj", "{D5EC15B3-68E9-4592-B0BA-DEAC879682F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,6 +95,18 @@ Global
 		{30C47DFC-B883-4496-ADCD-5D227BA932FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30C47DFC-B883-4496-ADCD-5D227BA932FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30C47DFC-B883-4496-ADCD-5D227BA932FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9DA5D1B-B7AB-4432-9B01-6AD66BE64690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9DA5D1B-B7AB-4432-9B01-6AD66BE64690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9DA5D1B-B7AB-4432-9B01-6AD66BE64690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9DA5D1B-B7AB-4432-9B01-6AD66BE64690}.Release|Any CPU.Build.0 = Release|Any CPU
+		{596A7A17-381C-45C4-AC12-CF7917AE4ECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{596A7A17-381C-45C4-AC12-CF7917AE4ECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{596A7A17-381C-45C4-AC12-CF7917AE4ECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{596A7A17-381C-45C4-AC12-CF7917AE4ECB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5EC15B3-68E9-4592-B0BA-DEAC879682F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5EC15B3-68E9-4592-B0BA-DEAC879682F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5EC15B3-68E9-4592-B0BA-DEAC879682F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5EC15B3-68E9-4592-B0BA-DEAC879682F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -98,6 +120,8 @@ Global
 		{3E393647-259E-4D98-86AC-C9A53606D1DE} = {3A484D44-D8B5-499B-9ACB-057C0981BF3D}
 		{77F71F00-D7F7-4472-8808-9AD8A20E14EB} = {1E61FB13-A4F0-4BD7-9A06-B3C7365E521B}
 		{30C47DFC-B883-4496-ADCD-5D227BA932FE} = {95F85747-DF27-4D1A-B9FD-639EBDED67EC}
+		{C9DA5D1B-B7AB-4432-9B01-6AD66BE64690} = {FD2A0876-FF38-459F-9C8F-D0894D5D020E}
+		{D5EC15B3-68E9-4592-B0BA-DEAC879682F6} = {288C9C01-5C63-4D1F-B06F-1CAEC71F5306}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B1FF0618-FF29-4D70-9CF7-C5B27E53BB12}

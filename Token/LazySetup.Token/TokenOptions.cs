@@ -31,5 +31,10 @@ namespace LazySetup.Token
         /// Defaults to key: "NotSoSecure1234" and algorithm : HmacSha512
         /// </summary>
         public SigningCredentials SigningCredentials { get; set; } = new SigningCredentials(new SymmetricSecurityKey(Encoding.ASCII.GetBytes("NotSoSecure12345")), SecurityAlgorithms.HmacSha256);
+
+        /// <summary>
+        /// Default is false.
+        /// </summary>
+        public bool UseCookie { get; set; } = false;
     }
 }

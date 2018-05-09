@@ -1,0 +1,36 @@
+﻿@using System.Web
+@model LazySetup.Charts.ViewComponents.PieViewModel
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(function() {
+        var data = google.visualization.arrayToDataTable([
+            ['Key', 'Value'],
+            @Html.Raw(String.Join(",", Model.Data.Select(x => "['" +x.Identifier+ "',"+x.Value+"]")))
+            @*@foreach (var item in Model.Data)
+            {
+                if (Model.Data.Last() != item)
+                {
+                    <text>['@item.Identifier', @item.Value],</text>
+                }
+                else
+                {
+                    <text>['@item.Identifier', @item.Value]</text>
+                }
+            }*@
+        ]);
+
+        var options = {
+            title: '@Model.Title',
+            pieHole: @Model.PieHole,
+            is3D: @Model.Is3D.ToString().ToLower(),
+            pieSliceText: 'none'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart-@Model.Id'));
+
+        chart.draw(data, options);
+    });
+</script>
+<div id="piechart-@Model.Id" class="piechart"></div>
